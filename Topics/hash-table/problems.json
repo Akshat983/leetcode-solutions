@@ -4,7 +4,7 @@
     "slug": "hash-table",
     "name": "Hash Table"
   },
-  "updatedAt": "2026-08-10T15:56:39.446Z",
+  "updatedAt": "2026-08-10T19:17:17.617Z",
   "problems": [
     {
       "frontendId": "383",
@@ -43,6 +43,26 @@
           "path": "0387-first-unique-character-in-a-string/0387-first-unique-character-in-a-string.java",
           "sha": "4134bf109b90f8ba57bee311d78cbeff43babfca",
           "lastSyncedAt": "2026-08-10T15:43:49.338Z"
+        }
+      ]
+    },
+    {
+      "frontendId": "409",
+      "title": "Longest Palindrome",
+      "slug": "longest-palindrome",
+      "problemName": "0409-longest-palindrome",
+      "difficulty": "Easy",
+      "leetcodeUrl": "https://leetcode.com/problems/longest-palindrome/",
+      "folderPath": "0409-longest-palindrome/",
+      "readmePath": "0409-longest-palindrome/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "0409-longest-palindrome.java",
+          "path": "0409-longest-palindrome/0409-longest-palindrome.java",
+          "sha": "c4b00ab539bd5d6aaf95029f54c34b8148c2ff43",
+          "lastSyncedAt": "2026-08-10T19:17:17.617Z"
         }
       ]
     }

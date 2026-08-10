@@ -1,0 +1,83 @@
+name: Update LeetCode README
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update README
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+
+          readme = Path("README.md")
+
+          if not readme.exists():
+              print("README.md not found")
+              exit(0)
+
+          text = readme.read_text(encoding="utf-8")
+
+          # Count solution folders in the repository root.
+          excluded = {
+              ".git",
+              ".github",
+              "Topics",
+          }
+
+          problems = []
+
+          for path in Path(".").iterdir():
+              if path.is_dir() and path.name not in excluded and not path.name.startswith("."):
+                  problems.append(path.name)
+
+          total = len(problems)
+
+          # Current known difficulty values.
+          # These can be updated later when we build the full automatic
+          # LeetCode metadata system.
+          print(f"Detected {total} solution folders.")
+
+          # Update total wherever the README contains the old value.
+          text = re.sub(
+              r'(<img src="https://img\.shields\.io/badge/Problems%20Solved-)\d+(-)',
+              rf'\g<1>{total}\g<2>',
+              text
+          )
+
+          # Update the Total column in the progress table.
+          text = re.sub(
+              r'(\|\s*\*\*115\*\*\s*\|\s*\*\*104\*\*\s*\|\s*\*\*23\*\*\s*\|\s*)\*\*\d+\*\*',
+              rf'\g<1>**{total}**',
+              text
+          )
+
+          readme.write_text(text, encoding="utf-8")
+          PY
+
+      - name: Commit README changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add README.md
+
+          if git diff --cached --quiet; then
+            echo "No README changes."
+          else
+            git commit -m "Update README statistics"
+            git push
+          fi

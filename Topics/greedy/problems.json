@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "topic": {
+    "slug": "greedy",
+    "name": "Greedy"
+  },
+  "updatedAt": "2026-08-10T19:17:17.617Z",
+  "problems": [
+    {
+      "frontendId": "409",
+      "title": "Longest Palindrome",
+      "slug": "longest-palindrome",
+      "problemName": "0409-longest-palindrome",
+      "difficulty": "Easy",
+      "leetcodeUrl": "https://leetcode.com/problems/longest-palindrome/",
+      "folderPath": "0409-longest-palindrome/",
+      "readmePath": "0409-longest-palindrome/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "0409-longest-palindrome.java",
+          "path": "0409-longest-palindrome/0409-longest-palindrome.java",
+          "sha": "c4b00ab539bd5d6aaf95029f54c34b8148c2ff43",
+          "lastSyncedAt": "2026-08-10T19:17:17.617Z"
+        }
+      ]
+    }
+  ]
+}

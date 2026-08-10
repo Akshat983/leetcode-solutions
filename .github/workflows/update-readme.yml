@@ -4,26 +4,39 @@ on:
   push:
     branches:
       - main
+    paths-ignore:
+      - 'README.md'
+      - '.github/leetcode_topics_cache.json'
+      - '.github/workflows/update-readme.yml'
+  schedule:
+    - cron: '0 3 * * 0'   # weekly Sunday 03:00 UTC re-sync
   workflow_dispatch:
 
 permissions:
   contents: write
 
+concurrency:
+  group: update-readme
+  cancel-in-progress: true
+
 jobs:
   update-readme:
     if: github.actor != 'github-actions[bot]'
-
     runs-on: ubuntu-latest
+    timeout-minutes: 10
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Update README
         run: |
           python3 -u <<'PY'
           import json
           import re
+          import sys
           import time
           from pathlib import Path
           from collections import Counter
@@ -31,216 +44,146 @@ jobs:
           from urllib.error import HTTPError, URLError
 
           README = Path("README.md")
+          CACHE_PATH = Path(".github/leetcode_topics_cache.json")
 
           LEETCODE_URL = "https://leetcode.com/api/problems/all/"
-
           GRAPHQL_URL = "https://leetcode.com/graphql"
 
           MAX_RETRIES = 5
+          REQUEST_TIMEOUT = 30
 
           HEADERS = {
               "User-Agent": (
-                  "Mozilla/5.0 "
-                  "(Windows NT 10.0; Win64; x64) "
-                  "AppleWebKit/537.36 "
-                  "(KHTML, like Gecko) "
+                  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                  "AppleWebKit/537.36 (KHTML, like Gecko) "
                   "Chrome/131.0.0.0 Safari/537.36"
               ),
               "Accept": "application/json",
               "Content-Type": "application/json",
           }
 
+          STATS_START = "<!-- LEETCODE-STATS:START -->"
+          STATS_END = "<!-- LEETCODE-STATS:END -->"
+          TOPICS_START = "<!-- LEETCODE-TOPICS:START -->"
+          TOPICS_END = "<!-- LEETCODE-TOPICS:END -->"
+          UNMATCHED_START = "<!-- LEETCODE-UNMATCHED:START -->"
+          UNMATCHED_END = "<!-- LEETCODE-UNMATCHED:END -->"
+
+          IGNORE_DIRS = {".git", ".github", "Topics", "node_modules", "__pycache__"}
+
 
           # ============================================================
           # FIND SOLUTION FOLDERS
           # ============================================================
 
-          solution_dirs = []
+          def find_solution_folders():
+              folders = {}
+              ambiguous = []
 
-          for path in Path(".").iterdir():
+              for path in sorted(Path(".").iterdir()):
+                  if not path.is_dir():
+                      continue
+                  if path.name in IGNORE_DIRS or path.name.startswith("."):
+                      continue
 
-              if not path.is_dir():
-                  continue
+                  match = re.match(r"^0*(\d+)", path.name)
+                  if not match:
+                      continue
 
-              if path.name in {
-                  ".git",
-                  ".github",
-                  "Topics"
-              }:
-                  continue
+                  number = int(match.group(1))
+                  if number in folders:
+                      ambiguous.append((number, folders[number], path.name))
+                      continue
 
-              if re.match(r"^\d+", path.name):
-                  solution_dirs.append(path.name)
+                  folders[number] = path.name
 
-          solution_dirs.sort(
-              key=lambda x: int(
-                  re.match(r"^\d+", x).group()
-              )
-          )
+              return folders, ambiguous
+
+
+          solution_folders, ambiguous_folders = find_solution_folders()
 
           print("=" * 70)
-          print(
-              f"Found {len(solution_dirs)} solution folders."
-          )
+          print(f"Found {len(solution_folders)} solution folders.")
           print("=" * 70)
 
-
-          # ============================================================
-          # CONVERT FOLDER NAME TO SLUG
-          # ============================================================
-
-          def make_slug(folder_name):
-
-              name = re.sub(
-                  r"^\d+\s*[-]?\s*",
-                  "",
-                  folder_name
-              )
-
-              name = name.lower()
-
-              name = re.sub(
-                  r"[^a-z0-9]+",
-                  "-",
-                  name
-              )
-
-              name = re.sub(
-                  r"-+",
-                  "-",
-                  name
-              )
-
-              return name.strip("-")
+          if ambiguous_folders:
+              print()
+              print(f"WARNING: {len(ambiguous_folders)} duplicate problem number(s) found:")
+              for number, kept, skipped in ambiguous_folders:
+                  print(f"  #{number}: keeping '{kept}', ignoring '{skipped}'")
 
 
           # ============================================================
-          # FETCH ALL LEETCODE PROBLEMS
+          # FETCH ALL LEETCODE PROBLEMS (single bulk request)
+          #
+          # This gives us difficulty AND the official slug for every
+          # problem, keyed by frontend_question_id. We match folders to
+          # problems by NUMBER, then use the slug LeetCode gives us --
+          # never a slug reconstructed from the folder's title text.
+          # Titles like "Pow(x, n)" or "Pascal's Triangle" don't
+          # slugify predictably (LeetCode drops some punctuation
+          # entirely rather than hyphenating it), so guessing breaks.
           # ============================================================
 
-          def fetch_all_problems():
+          def fetch_json(url, data=None, method="GET"):
+              last_error = None
+              for attempt in range(1, MAX_RETRIES + 1):
+                  try:
+                      request = Request(url, data=data, headers=HEADERS, method=method)
+                      with urlopen(request, timeout=REQUEST_TIMEOUT) as response:
+                          return json.loads(response.read().decode("utf-8"))
+                  except (HTTPError, URLError, TimeoutError, json.JSONDecodeError) as error:
+                      last_error = error
+                      print(f"  attempt {attempt}/{MAX_RETRIES} failed: "
+                            f"{type(error).__name__}: {error}")
+                      if attempt < MAX_RETRIES:
+                          time.sleep(attempt * 3)
+              raise RuntimeError(f"giving up on {url} after {MAX_RETRIES} attempts: {last_error}")
 
+
+          def fetch_bulk_problems():
               print()
               print("=" * 70)
               print("Fetching LeetCode problem database...")
               print("=" * 70)
 
-              for attempt in range(1, MAX_RETRIES + 1):
+              data = fetch_json(LEETCODE_URL)
+              raw = data.get("stat_status_pairs", [])
+              if not raw:
+                  raise RuntimeError("LeetCode returned no problems.")
 
-                  try:
+              by_id = {}
+              for item in raw:
+                  stat = item.get("stat", {})
+                  frontend_id = stat.get("frontend_question_id")
+                  slug = stat.get("question__title_slug")
+                  if frontend_id is None or not slug:
+                      continue
 
-                      request = Request(
-                          LEETCODE_URL,
-                          headers=HEADERS,
-                          method="GET"
-                      )
+                  level = item.get("difficulty", {}).get("level")
+                  difficulty = {1: "Easy", 2: "Medium", 3: "Hard"}.get(level, "Unknown")
 
-                      with urlopen(
-                          request,
-                          timeout=60
-                      ) as response:
+                  by_id[int(frontend_id)] = {
+                      "slug": slug,
+                      "title": stat.get("question__title"),
+                      "difficulty": difficulty,
+                  }
 
-                          data = json.loads(
-                              response.read().decode("utf-8")
-                          )
-
-                      problems = data.get(
-                          "stat_status_pairs",
-                          []
-                      )
-
-                      if not problems:
-                          raise RuntimeError(
-                              "LeetCode returned no problems."
-                          )
-
-                      print(
-                          f"Successfully fetched "
-                          f"{len(problems)} problems."
-                      )
-
-                      return problems
-
-                  except Exception as error:
-
-                      print(
-                          f"Attempt {attempt}/{MAX_RETRIES} failed:"
-                      )
-
-                      print(
-                          f"{type(error).__name__}: {error}"
-                      )
-
-                      if attempt == MAX_RETRIES:
-                          raise
-
-                      time.sleep(
-                          attempt * 3
-                      )
+              print(f"Loaded {len(by_id)} problems.")
+              return by_id
 
 
-          raw_problems = fetch_all_problems()
+          try:
+              problems_by_id = fetch_bulk_problems()
+          except RuntimeError as error:
+              print()
+              print(f"FATAL: {error}")
+              print("Leaving README.md untouched for this run.")
+              sys.exit(1)
 
 
           # ============================================================
-          # CREATE PROBLEM LOOKUP
-          # ============================================================
-
-          problems = {}
-
-          for item in raw_problems:
-
-              stat = item.get(
-                  "stat",
-                  {}
-              )
-
-              slug = stat.get(
-                  "question__title_slug"
-              )
-
-              if not slug:
-                  continue
-
-              difficulty_data = item.get(
-                  "difficulty",
-                  {}
-              )
-
-              level = difficulty_data.get(
-                  "level"
-              )
-
-              if level == 1:
-                  difficulty = "Easy"
-
-              elif level == 2:
-                  difficulty = "Medium"
-
-              elif level == 3:
-                  difficulty = "Hard"
-
-              else:
-                  difficulty = "Unknown"
-
-              problems[slug] = {
-                  "id": stat.get(
-                      "frontend_question_id"
-                  ),
-                  "title": stat.get(
-                      "question__title"
-                  ),
-                  "difficulty": difficulty
-              }
-
-          print(
-              f"Created lookup for "
-              f"{len(problems)} problems."
-          )
-
-
-          # ============================================================
-          # MATCH FOLDERS
+          # MATCH FOLDERS BY NUMBER
           # ============================================================
 
           print()
@@ -248,155 +191,66 @@ jobs:
           print("MATCHING SOLUTION FOLDERS")
           print("=" * 70)
 
-          matched = []
-
-          failed = []
-
+          matched_slugs = []
+          failed_folders = []
           difficulties = Counter()
 
-          matched_slugs = []
-
-          for index, folder in enumerate(
-              solution_dirs,
-              start=1
-          ):
-
-              slug = make_slug(folder)
-
-              problem = problems.get(slug)
+          for number, folder in sorted(solution_folders.items()):
+              problem = problems_by_id.get(number)
 
               if problem is None:
-
-                  print(
-                      f"[{index}/{len(solution_dirs)}] "
-                      f"{folder} -> NOT FOUND"
-                  )
-
-                  failed.append(folder)
-
+                  print(f"  #{number:<5} {folder} -> NOT FOUND")
+                  failed_folders.append(folder)
                   continue
 
-              title = problem["title"]
+              print(f"  #{number:<5} {folder} -> {problem['title']} "
+                    f"({problem['difficulty']}) [{problem['slug']}]")
 
-              difficulty = problem["difficulty"]
-
-              print(
-                  f"[{index}/{len(solution_dirs)}] "
-                  f"{folder} -> "
-                  f"{title} -> "
-                  f"{difficulty}"
-              )
-
-              matched.append(folder)
-
-              matched_slugs.append(slug)
-
-              if difficulty in {
-                  "Easy",
-                  "Medium",
-                  "Hard"
-              }:
-
-                  difficulties[difficulty] += 1
-
-
-          # ============================================================
-          # STATISTICS
-          # ============================================================
+              matched_slugs.append(problem["slug"])
+              if problem["difficulty"] in {"Easy", "Medium", "Hard"}:
+                  difficulties[problem["difficulty"]] += 1
 
           easy = difficulties["Easy"]
-
           medium = difficulties["Medium"]
-
           hard = difficulties["Hard"]
-
-          total = easy + medium + hard
+          total = len(solution_folders)  # actual folder count, never hardcoded
 
           print()
           print("=" * 70)
-          print("FINAL STATISTICS")
+          print("STATISTICS")
           print("=" * 70)
-
-          print(
-              f"Solution folders : {len(solution_dirs)}"
-          )
-
-          print(
-              f"Matched          : {len(matched)}"
-          )
-
-          print(
-              f"Easy             : {easy}"
-          )
-
-          print(
-              f"Medium           : {medium}"
-          )
-
-          print(
-              f"Hard             : {hard}"
-          )
-
-          print(
-              f"Total            : {total}"
-          )
-
-          print("=" * 70)
+          print(f"Folders : {total}")
+          print(f"Matched : {len(matched_slugs)}")
+          print(f"Easy    : {easy}")
+          print(f"Medium  : {medium}")
+          print(f"Hard    : {hard}")
 
 
           # ============================================================
-          # PROGRESS BAR
-          # ============================================================
-
-          def bar(
-              value,
-              maximum,
-              length=30
-          ):
-
-              if maximum == 0:
-                  return "░" * length
-
-              filled = round(
-                  value / maximum * length
-              )
-
-              filled = max(
-                  0,
-                  min(
-                      filled,
-                      length
-                  )
-              )
-
-              return (
-                  "█" * filled
-                  + "░" * (
-                      length - filled
-                  )
-              )
-
-
-          maximum = max(
-              easy,
-              medium,
-              hard,
-              1
-          )
-
-
-          # ============================================================
-          # TOPICS
+          # TOPICS -- fetch only for problems not already in the cache
           #
-          # Fetch topics only for the problems you actually solved.
-          # This avoids downloading/querying all 4000+ problems.
+          # The cache is committed back to the repo, so a repo with 243
+          # solved problems makes ~243 GraphQL calls ONCE, ever. Every
+          # future run only fetches topics for newly added folders.
           # ============================================================
 
-          QUERY = """
-          query questionData($titleSlug: String!) {
+          def load_cache():
+              if CACHE_PATH.exists():
+                  try:
+                      return json.loads(CACHE_PATH.read_text())
+                  except json.JSONDecodeError:
+                      print("  WARNING: topic cache is corrupt, starting fresh")
+              return {}
+
+
+          def save_cache(cache):
+              CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+              CACHE_PATH.write_text(json.dumps(cache, indent=2, sort_keys=True) + "\n")
+
+
+          TOPIC_QUERY = """
+          query questionTopicTags($titleSlug: String!) {
             question(titleSlug: $titleSlug) {
-              title
-              titleSlug
               topicTags {
                 name
               }
@@ -406,72 +260,17 @@ jobs:
 
 
           def fetch_topics(slug):
-
               payload = json.dumps({
-                  "query": QUERY,
-                  "variables": {
-                      "titleSlug": slug
-                  }
+                  "query": TOPIC_QUERY,
+                  "variables": {"titleSlug": slug},
+                  "operationName": "questionTopicTags",
               }).encode("utf-8")
 
-              for attempt in range(
-                  1,
-                  MAX_RETRIES + 1
-              ):
-
-                  try:
-
-                      request = Request(
-                          GRAPHQL_URL,
-                          data=payload,
-                          headers=HEADERS,
-                          method="POST"
-                      )
-
-                      with urlopen(
-                          request,
-                          timeout=30
-                      ) as response:
-
-                          data = json.loads(
-                              response.read().decode(
-                                  "utf-8"
-                              )
-                          )
-
-                      question = (
-                          data
-                          .get("data", {})
-                          .get("question")
-                      )
-
-                      if not question:
-                          return []
-
-                      return [
-                          tag["name"]
-                          for tag in question.get(
-                              "topicTags",
-                              []
-                          )
-                          if tag.get("name")
-                      ]
-
-                  except Exception as error:
-
-                      print(
-                          f"Topic fetch failed for "
-                          f"{slug} "
-                          f"(attempt {attempt}): "
-                          f"{error}"
-                      )
-
-                      if attempt < MAX_RETRIES:
-                          time.sleep(
-                              attempt * 2
-                          )
-
-              return []
+              data = fetch_json(GRAPHQL_URL, data=payload, method="POST")
+              question = (data or {}).get("data", {}).get("question")
+              if not question:
+                  return []
+              return [t["name"] for t in question.get("topicTags", []) if t.get("name")]
 
 
           print()
@@ -479,272 +278,137 @@ jobs:
           print("FETCHING TOPICS")
           print("=" * 70)
 
-          topics = Counter()
+          cache = load_cache()
+          topic_counts = Counter()
+          newly_fetched = 0
 
-          for index, slug in enumerate(
-              matched_slugs,
-              start=1
-          ):
+          for index, slug in enumerate(matched_slugs, start=1):
+              if slug in cache:
+                  topics = cache[slug]
+              else:
+                  print(f"  [{index}/{len(matched_slugs)}] fetching topics for '{slug}'...")
+                  try:
+                      topics = fetch_topics(slug)
+                      cache[slug] = topics
+                      newly_fetched += 1
+                      time.sleep(0.6)  # be polite to LeetCode
+                  except RuntimeError as error:
+                      print(f"    WARNING: {error}")
+                      topics = cache.get(slug, [])
 
-              print(
-                  f"[{index}/{len(matched_slugs)}] "
-                  f"{slug}"
-              )
+              for topic in topics:
+                  topic_counts[topic] += 1
 
-              problem_topics = fetch_topics(
-                  slug
-              )
-
-              for topic in problem_topics:
-                  topics[topic] += 1
-
-              time.sleep(0.15)
-
-
-          # ============================================================
-          # TOPIC SECTION
-          # ============================================================
-
-          topic_lines = []
-
-          topic_lines.append(
-              "## 🧠 Topics"
-          )
-
-          topic_lines.append("")
-
-          topic_lines.append(
-              "| Topic | Problems | Progress |"
-          )
-
-          topic_lines.append(
-              "| :--- | ---: | :--- |"
-          )
-
-
-          for topic, count in topics.most_common():
-
-              topic_bar = bar(
-                  count,
-                  max(
-                      topics.values()
-                  ) if topics else 1,
-                  25
-              )
-
-              topic_lines.append(
-                  f"| {topic} | **{count}** | "
-                  f"`{topic_bar}` |"
-              )
-
-
-          topic_section = "\n".join(
-              topic_lines
-          )
+          save_cache(cache)
+          print(f"Topics fetched fresh this run: {newly_fetched}")
+          print(f"Unique topics tracked: {len(topic_counts)}")
 
 
           # ============================================================
-          # DIFFICULTY SECTION
+          # RENDER SECTIONS
           # ============================================================
 
-          difficulty_section = f"""## 📊 LeetCode Progress
-
-          | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
-          | :---: | :---: | :---: | :---: |
-          | **{easy}** | **{medium}** | **{hard}** | **{total}** |
-
-          ### Difficulty Distribution
-
-          ```text
-          🟢 Easy       {easy:>4}  {bar(easy, maximum)}
-          🟡 Medium     {medium:>4}  {bar(medium, maximum)}
-          🔴 Hard       {hard:>4}  {bar(hard, maximum)}
-          ```
-          """
+          def bar(value, maximum, length=25):
+              if maximum <= 0:
+                  return "░" * length
+              filled = max(0, min(length, round(value / maximum * length)))
+              return "█" * filled + "░" * (length - filled)
 
 
-          # ============================================================
-          # FAILED PROBLEMS
-          # ============================================================
+          def render_stats():
+              max_diff = max(easy, medium, hard, 1)
+              lines = [
+                  "## 📊 LeetCode Progress",
+                  "",
+                  "| 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |",
+                  "| :---: | :---: | :---: | :---: |",
+                  f"| **{easy}** | **{medium}** | **{hard}** | **{total}** |",
+                  "",
+                  "### Difficulty Distribution",
+                  "",
+                  "```text",
+                  f"🟢 Easy       {easy:>4}  {bar(easy, max_diff)}",
+                  f"🟡 Medium     {medium:>4}  {bar(medium, max_diff)}",
+                  f"🔴 Hard       {hard:>4}  {bar(hard, max_diff)}",
+                  "```",
+              ]
+              return "\n".join(lines)
 
-          failed_section = ""
 
-          if failed:
+          def render_topics():
+              lines = [
+                  "## 🧠 Topics",
+                  "",
+                  "| Topic | Problems | Progress |",
+                  "| :--- | ---: | :--- |",
+              ]
+              if not topic_counts:
+                  lines.append("| _no topic data yet_ | | |")
+                  return "\n".join(lines)
 
-              failed_lines = [
+              max_count = max(topic_counts.values())
+              for topic, count in topic_counts.most_common():
+                  lines.append(f"| {topic} | **{count}** | `{bar(count, max_count)}` |")
+              return "\n".join(lines)
+
+
+          def render_unmatched():
+              if not failed_folders:
+                  return ""
+              lines = [
                   "### ⚠️ Problems Not Matched",
                   "",
-                  (
-                      f"{len(failed)} solution folders "
-                      "could not be matched:"
-                  ),
-                  ""
+                  f"{len(failed_folders)} solution folder(s) could not be matched "
+                  "to a LeetCode problem number:",
+                  "",
               ]
+              lines += [f"- `{folder}`" for folder in failed_folders]
+              return "\n".join(lines)
 
-              for folder in failed:
 
-                  failed_lines.append(
-                      f"- `{folder}`"
+          # ============================================================
+          # UPDATE README (marker-based, never guesses where to inject)
+          # ============================================================
+
+          def replace_block(content, start, end, body):
+              pattern = re.compile(re.escape(start) + r".*?" + re.escape(end), re.DOTALL)
+              if not pattern.search(content):
+                  raise RuntimeError(
+                      f"markers {start} / {end} not found in README.md -- "
+                      "add them once, then re-run"
                   )
+              replacement = f"{start}\n{body}\n{end}"
+              return pattern.sub(lambda _m: replacement, content, count=1)
 
-              failed_section = (
-                  "\n".join(
-                      failed_lines
-                  )
-                  + "\n"
-              )
-
-
-          # ============================================================
-          # COMPLETE GENERATED SECTION
-          # ============================================================
-
-          generated_section = (
-              difficulty_section
-              + "\n"
-              + topic_section
-              + "\n"
-              + failed_section
-          )
-
-
-          # ============================================================
-          # UPDATE README
-          # ============================================================
 
           if not README.exists():
+              print("FATAL: README.md not found.")
+              sys.exit(1)
 
-              raise SystemExit(
-                  "README.md not found."
-              )
+          content = README.read_text(encoding="utf-8")
 
+          try:
+              content = replace_block(content, STATS_START, STATS_END, render_stats())
+              content = replace_block(content, TOPICS_START, TOPICS_END, render_topics())
+              content = replace_block(content, UNMATCHED_START, UNMATCHED_END, render_unmatched())
+          except RuntimeError as error:
+              print(f"FATAL: {error}")
+              sys.exit(1)
 
-          readme = README.read_text(
-              encoding="utf-8"
-          )
-
-
-          marker = "## 📊 LeetCode Progress"
-
-
-          if marker in readme:
-
-              readme = (
-                  readme.split(
-                      marker,
-                      1
-                  )[0]
-                  .rstrip()
-                  + "\n\n"
-                  + generated_section.strip()
-                  + "\n"
-              )
-
-          else:
-
-              readme = (
-                  readme.rstrip()
-                  + "\n\n"
-                  + generated_section.strip()
-                  + "\n"
-              )
-
-
-          README.write_text(
-              readme,
-              encoding="utf-8"
-          )
-
-
-          # ============================================================
-          # VERIFY README
-          # ============================================================
-
-          final_readme = README.read_text(
-              encoding="utf-8"
-          )
-
-
-          if marker not in final_readme:
-
-              raise SystemExit(
-                  "ERROR: Progress section was not written."
-              )
-
-
-          progress = final_readme.split(
-              marker,
-              1
-          )[1]
-
-
-          # Check that Python placeholders weren't accidentally written.
-
-          forbidden = [
-              "{easy}",
-              "{medium}",
-              "{hard}",
-              "{total}",
-              "{difficulties["
-          ]
-
-
-          for item in forbidden:
-
-              if item in progress:
-
-                  raise SystemExit(
-                      "ERROR: README contains "
-                      f"unexpanded expression: {item}"
-                  )
-
+          README.write_text(content, encoding="utf-8")
 
           print()
           print("=" * 70)
           print("README UPDATED SUCCESSFULLY")
           print("=" * 70)
+          print(f"Easy: {easy}  Medium: {medium}  Hard: {hard}  Total: {total}")
+          print(f"Topics: {len(topic_counts)}  Unmatched: {len(failed_folders)}")
 
-          print(
-              f"Easy   : {easy}"
-          )
-
-          print(
-              f"Medium : {medium}"
-          )
-
-          print(
-              f"Hard   : {hard}"
-          )
-
-          print(
-              f"Total  : {total}"
-          )
-
-          print(
-              f"Topics : {len(topics)}"
-          )
-
-          print(
-              f"Matched: {len(matched)}"
-          )
-
-          print("=" * 70)
-
-
-          if failed:
-
+          if failed_folders:
               print()
-              print(
-                  f"WARNING: {len(failed)} "
-                  "folders were not matched."
-              )
-
-              for folder in failed:
-
-                  print(
-                      f" - {folder}"
-                  )
-
+              print("Folders needing attention:")
+              for folder in failed_folders:
+                  print(f"  - {folder}")
           PY
 
       - name: Commit README changes
@@ -752,12 +416,12 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add README.md
+          git add README.md .github/leetcode_topics_cache.json
 
           if git diff --cached --quiet; then
-            echo "No README changes."
+            echo "No changes to commit."
             exit 0
           fi
 
-          git commit -m "Update LeetCode README statistics"
+          git commit -m "chore: auto-update LeetCode README stats [skip ci]"
           git push

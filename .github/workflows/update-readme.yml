@@ -18,16 +18,14 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Update README statistics
-        env:
-          PYTHONUNBUFFERED: "1"
         run: |
           python - <<'PY'
           import re
           import time
+          import json
           from pathlib import Path
           from collections import Counter
           from urllib.request import Request, urlopen
-          import json
 
           README = Path("README.md")
           LEETCODE_URL = "https://leetcode.com/graphql"
@@ -64,24 +62,18 @@ jobs:
               )
 
               with urlopen(request, timeout=20) as response:
-                  return json.loads(response.read().decode("utf-8"))
+                  return json.loads(
+                      response.read().decode("utf-8")
+                  )
 
           def make_slug(folder_name):
-              """
-              Converts:
-                  0387-first-unique-character-in-a-string
-              into:
-                  first-unique-character-in-a-string
+              name = re.sub(
+                  r"^\d+\s*[-]?\s*",
+                  "",
+                  folder_name
+              )
 
-              And:
-                  1 Two Sum
-              into:
-                  two-sum
-              """
-
-              name = re.sub(r"^\d+\s*[-]?\s*", "", folder_name)
               name = name.lower()
-
               name = re.sub(r"[^a-z0-9]+", "-", name)
               name = re.sub(r"-+", "-", name)
               name = name.strip("-")
@@ -89,7 +81,7 @@ jobs:
               return name
 
           # ---------------------------------------------------------
-          # Find all LeetCode solution folders
+          # Find solution folders
           # ---------------------------------------------------------
 
           solution_dirs = []
@@ -99,7 +91,11 @@ jobs:
               if not path.is_dir():
                   continue
 
-              if path.name in {".git", ".github", "Topics"}:
+              if path.name in {
+                  ".git",
+                  ".github",
+                  "Topics"
+              }:
                   continue
 
               if re.match(r"^\d+", path.name):
@@ -107,18 +103,22 @@ jobs:
 
           solution_dirs.sort()
 
-          print(f"Found {len(solution_dirs)} solution folders.")
+          print(
+              f"Found {len(solution_dirs)} solution folders."
+          )
 
           difficulties = Counter()
           topics = Counter()
-
           failed = []
 
           # ---------------------------------------------------------
           # Fetch LeetCode metadata
           # ---------------------------------------------------------
 
-          for index, folder in enumerate(solution_dirs, start=1):
+          for index, folder in enumerate(
+              solution_dirs,
+              start=1
+          ):
 
               slug = make_slug(folder)
 
@@ -132,21 +132,30 @@ jobs:
                   data = get_problem(slug)
 
                   question = (
-                      data.get("data", {})
-                          .get("question")
+                      data
+                      .get("data", {})
+                      .get("question")
                   )
 
                   if not question:
-                      print(f"  WARNING: Problem not found")
+                      print(
+                          "  WARNING: Problem not found"
+                      )
                       failed.append(folder)
                       continue
 
-                  difficulty = question.get("difficulty")
+                  difficulty = question.get(
+                      "difficulty"
+                  )
 
                   if difficulty:
                       difficulties[difficulty] += 1
 
-                  for tag in question.get("topicTags", []):
+                  for tag in question.get(
+                      "topicTags",
+                      []
+                  ):
+
                       topic_name = tag.get("name")
 
                       if topic_name:
@@ -160,55 +169,192 @@ jobs:
 
                   failed.append(folder)
 
-              # Be polite to LeetCode.
               time.sleep(0.15)
 
-          total = sum(difficulties.values())
+          # ---------------------------------------------------------
+          # Statistics
+          # ---------------------------------------------------------
+
+          easy = difficulties["Easy"]
+          medium = difficulties["Medium"]
+          hard = difficulties["Hard"]
+
+          total = easy + medium + hard
 
           print()
-          print("================================")
+          print("==============================")
           print("LeetCode Statistics")
-          print("================================")
-          print(f"Easy:   {difficulties['Easy']}")
-          print(f"Medium: {difficulties['Medium']}")
-          print(f"Hard:   {difficulties['Hard']}")
+          print("==============================")
+          print(f"Easy:   {easy}")
+          print(f"Medium: {medium}")
+          print(f"Hard:   {hard}")
           print(f"Total:  {total}")
 
           if failed:
+
               print()
               print("Failed to fetch:")
+
               for item in failed:
                   print(f" - {item}")
 
           # ---------------------------------------------------------
-          # Build difficulty bars
+          # Progress bar
           # ---------------------------------------------------------
 
-          def bar(value, maximum, length=30):
+          def bar(
+              value,
+              maximum,
+              length=30
+          ):
 
               if maximum == 0:
                   return ""
 
-              filled = round((value / maximum) * length)
+              filled = round(
+                  (value / maximum) * length
+              )
 
-              return "█" * filled + "░" * (length - filled)
+              return (
+                  "█" * filled
+                  + "░" * (length - filled)
+              )
 
           maximum = max(
-              difficulties["Easy"],
-              difficulties["Medium"],
-              difficulties["Hard"],
+              easy,
+              medium,
+              hard,
               1
           )
 
+          # ---------------------------------------------------------
+          # Difficulty section
+          # ---------------------------------------------------------
+
           difficulty_section = f"""## 📊 LeetCode Progress
 
-| 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
-|:---:|:---:|:---:|:---:|
-| **{difficulties["Easy"]}** | **{difficulties["Medium"]}** | **{difficulties["Hard"]}** | **{total}** |
+          | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
+          |:---:|:---:|:---:|:---:|
+          | **{easy}** | **{medium}** | **{hard}** | **{total}** |
 
-### Difficulty Distribution
+          ### Difficulty Distribution
 
-```text
-🟢 Easy       {difficulties["Easy"]:>4}  {bar(difficulties["Easy"], maximum)}
-🟡 Medium     {difficulties["Medium"]:>4}  {bar(difficulties["Medium"], maximum)}
-🔴 Hard       {difficulties["Hard"]:>4}  {bar(difficulties["Hard"], maximum)}
+          ```text
+          🟢 Easy       {easy:>4}  {bar(easy, maximum)}
+          🟡 Medium     {medium:>4}  {bar(medium, maximum)}
+          🔴 Hard       {hard:>4}  {bar(hard, maximum)}
+          ```
+          """
+
+          # ---------------------------------------------------------
+          # Topic section
+          # ---------------------------------------------------------
+
+          topic_lines = [
+              "## 🧠 Topics",
+              "",
+              "| Topic | Problems | Progress |",
+              "|:---|---:|:---|"
+          ]
+
+          max_topic = max(
+              topics.values(),
+              default=1
+          )
+
+          for topic, count in topics.most_common():
+
+              topic_bar = bar(
+                  count,
+                  max_topic,
+                  20
+              )
+
+              topic_lines.append(
+                  f"| {topic} | **{count}** | "
+                  f"`{topic_bar}` |"
+              )
+
+          topic_section = (
+              "\n".join(topic_lines)
+              + "\n"
+          )
+
+          # ---------------------------------------------------------
+          # Update README
+          # ---------------------------------------------------------
+
+          text = README.read_text(
+              encoding="utf-8"
+          )
+
+          # Remove previous generated statistics.
+          text = re.sub(
+              r"## 📊 LeetCode Progress.*?(?=## |\Z)",
+              "",
+              text,
+              flags=re.S
+          )
+
+          # Remove previous generated topics.
+          text = re.sub(
+              r"## 🧠 Topics.*?(?=## |\Z)",
+              "",
+              text,
+              flags=re.S
+          )
+
+          marker = (
+              "A collection of my LeetCode solutions, "
+              "focused on Data Structures, Algorithms, "
+              "problem solving, and competitive programming."
+          )
+
+          generated = (
+              difficulty_section
+              + "\n"
+              + topic_section
+          )
+
+          if marker in text:
+
+              text = text.replace(
+                  marker,
+                  marker
+                  + "\n\n"
+                  + generated,
+                  1
+              )
+
+          else:
+
+              text = (
+                  generated
+                  + "\n"
+                  + text
+              )
+
+          README.write_text(
+              text,
+              encoding="utf-8"
+          )
+
+          print()
+          print(
+              "README updated successfully."
+          )
+          PY
+
+      - name: Commit README changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add README.md
+
+          if git diff --cached --quiet; then
+            echo "No README changes."
+          else
+            git commit -m "Update LeetCode statistics"
+            git push
+          fi

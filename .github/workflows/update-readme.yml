@@ -17,67 +17,198 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Update README
+      - name: Update README statistics
+        env:
+          PYTHONUNBUFFERED: "1"
         run: |
           python - <<'PY'
-          from pathlib import Path
           import re
+          import time
+          from pathlib import Path
+          from collections import Counter
+          from urllib.request import Request, urlopen
+          import json
 
-          readme = Path("README.md")
+          README = Path("README.md")
+          LEETCODE_URL = "https://leetcode.com/graphql"
 
-          if not readme.exists():
-              print("README.md not found")
-              exit(0)
-
-          text = readme.read_text(encoding="utf-8")
-
-          # Count solution folders in the repository root.
-          excluded = {
-              ".git",
-              ".github",
-              "Topics",
+          QUERY = """
+          query questionData($titleSlug: String!) {
+            question(titleSlug: $titleSlug) {
+              questionId
+              title
+              difficulty
+              topicTags {
+                name
+              }
+            }
           }
+          """
 
-          problems = []
+          def get_problem(slug):
+              payload = json.dumps({
+                  "query": QUERY,
+                  "variables": {
+                      "titleSlug": slug
+                  }
+              }).encode("utf-8")
+
+              request = Request(
+                  LEETCODE_URL,
+                  data=payload,
+                  headers={
+                      "Content-Type": "application/json",
+                      "User-Agent": "Mozilla/5.0"
+                  },
+                  method="POST"
+              )
+
+              with urlopen(request, timeout=20) as response:
+                  return json.loads(response.read().decode("utf-8"))
+
+          def make_slug(folder_name):
+              """
+              Converts:
+                  0387-first-unique-character-in-a-string
+              into:
+                  first-unique-character-in-a-string
+
+              And:
+                  1 Two Sum
+              into:
+                  two-sum
+              """
+
+              name = re.sub(r"^\d+\s*[-]?\s*", "", folder_name)
+              name = name.lower()
+
+              name = re.sub(r"[^a-z0-9]+", "-", name)
+              name = re.sub(r"-+", "-", name)
+              name = name.strip("-")
+
+              return name
+
+          # ---------------------------------------------------------
+          # Find all LeetCode solution folders
+          # ---------------------------------------------------------
+
+          solution_dirs = []
 
           for path in Path(".").iterdir():
-              if path.is_dir() and path.name not in excluded and not path.name.startswith("."):
-                  problems.append(path.name)
 
-          total = len(problems)
+              if not path.is_dir():
+                  continue
 
-          # Current known difficulty values.
-          # These can be updated later when we build the full automatic
-          # LeetCode metadata system.
-          print(f"Detected {total} solution folders.")
+              if path.name in {".git", ".github", "Topics"}:
+                  continue
 
-          # Update total wherever the README contains the old value.
-          text = re.sub(
-              r'(<img src="https://img\.shields\.io/badge/Problems%20Solved-)\d+(-)',
-              rf'\g<1>{total}\g<2>',
-              text
+              if re.match(r"^\d+", path.name):
+                  solution_dirs.append(path.name)
+
+          solution_dirs.sort()
+
+          print(f"Found {len(solution_dirs)} solution folders.")
+
+          difficulties = Counter()
+          topics = Counter()
+
+          failed = []
+
+          # ---------------------------------------------------------
+          # Fetch LeetCode metadata
+          # ---------------------------------------------------------
+
+          for index, folder in enumerate(solution_dirs, start=1):
+
+              slug = make_slug(folder)
+
+              print(
+                  f"[{index}/{len(solution_dirs)}] "
+                  f"{folder} -> {slug}"
+              )
+
+              try:
+
+                  data = get_problem(slug)
+
+                  question = (
+                      data.get("data", {})
+                          .get("question")
+                  )
+
+                  if not question:
+                      print(f"  WARNING: Problem not found")
+                      failed.append(folder)
+                      continue
+
+                  difficulty = question.get("difficulty")
+
+                  if difficulty:
+                      difficulties[difficulty] += 1
+
+                  for tag in question.get("topicTags", []):
+                      topic_name = tag.get("name")
+
+                      if topic_name:
+                          topics[topic_name] += 1
+
+              except Exception as error:
+
+                  print(
+                      f"  ERROR: {error}"
+                  )
+
+                  failed.append(folder)
+
+              # Be polite to LeetCode.
+              time.sleep(0.15)
+
+          total = sum(difficulties.values())
+
+          print()
+          print("================================")
+          print("LeetCode Statistics")
+          print("================================")
+          print(f"Easy:   {difficulties['Easy']}")
+          print(f"Medium: {difficulties['Medium']}")
+          print(f"Hard:   {difficulties['Hard']}")
+          print(f"Total:  {total}")
+
+          if failed:
+              print()
+              print("Failed to fetch:")
+              for item in failed:
+                  print(f" - {item}")
+
+          # ---------------------------------------------------------
+          # Build difficulty bars
+          # ---------------------------------------------------------
+
+          def bar(value, maximum, length=30):
+
+              if maximum == 0:
+                  return ""
+
+              filled = round((value / maximum) * length)
+
+              return "█" * filled + "░" * (length - filled)
+
+          maximum = max(
+              difficulties["Easy"],
+              difficulties["Medium"],
+              difficulties["Hard"],
+              1
           )
 
-          # Update the Total column in the progress table.
-          text = re.sub(
-              r'(\|\s*\*\*115\*\*\s*\|\s*\*\*104\*\*\s*\|\s*\*\*23\*\*\s*\|\s*)\*\*\d+\*\*',
-              rf'\g<1>**{total}**',
-              text
-          )
+          difficulty_section = f"""## 📊 LeetCode Progress
 
-          readme.write_text(text, encoding="utf-8")
-          PY
+| 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
+|:---:|:---:|:---:|:---:|
+| **{difficulties["Easy"]}** | **{difficulties["Medium"]}** | **{difficulties["Hard"]}** | **{total}** |
 
-      - name: Commit README changes
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+### Difficulty Distribution
 
-          git add README.md
-
-          if git diff --cached --quiet; then
-            echo "No README changes."
-          else
-            git commit -m "Update README statistics"
-            git push
-          fi
+```text
+🟢 Easy       {difficulties["Easy"]:>4}  {bar(difficulties["Easy"], maximum)}
+🟡 Medium     {difficulties["Medium"]:>4}  {bar(difficulties["Medium"], maximum)}
+🔴 Hard       {difficulties["Hard"]:>4}  {bar(difficulties["Hard"], maximum)}

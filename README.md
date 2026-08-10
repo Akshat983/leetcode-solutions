@@ -2,7 +2,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/Language-Java-orange?style=for-the-badge&logo=openjdk" />
-  <img src="https://img.shields.io/badge/Problems%20Solved-242-blue?style=for-the-badge&logo=leetcode" />
+  <img src="https://img.shields.io/badge/Problems%20Solved-243-blue?style=for-the-badge&logo=leetcode" />
   <img src="https://img.shields.io/badge/LeetCode-Active-black?style=for-the-badge&logo=leetcode" />
 </p>
 
@@ -17,7 +17,7 @@
 
 | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
 |:---:|:---:|:---:|:---:|
-| **115** | **104** | **23** | **242** |
+| **115** | **104** | **23** | **243** |
 
 ### Difficulty Distribution
 

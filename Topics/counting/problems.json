@@ -4,8 +4,28 @@
     "slug": "counting",
     "name": "Counting"
   },
-  "updatedAt": "2026-08-10T15:43:49.338Z",
+  "updatedAt": "2026-08-10T15:56:39.446Z",
   "problems": [
+    {
+      "frontendId": "383",
+      "title": "Ransom Note",
+      "slug": "ransom-note",
+      "problemName": "0383-ransom-note",
+      "difficulty": "Easy",
+      "leetcodeUrl": "https://leetcode.com/problems/ransom-note/",
+      "folderPath": "0383-ransom-note/",
+      "readmePath": "0383-ransom-note/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "0383-ransom-note.java",
+          "path": "0383-ransom-note/0383-ransom-note.java",
+          "sha": "039beb04f271f3b42381bffbbddb2e65374e447c",
+          "lastSyncedAt": "2026-08-10T15:56:39.446Z"
+        }
+      ]
+    },
     {
       "frontendId": "387",
       "title": "First Unique Character in a String",

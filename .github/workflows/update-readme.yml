@@ -17,9 +17,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Update README statistics
-        env:
-          PYTHONUNBUFFERED: "1"
+      - name: Update README
         run: |
           python - <<'PY'
           import re
@@ -32,41 +30,25 @@ jobs:
           README = Path("README.md")
           LEETCODE_URL = "https://leetcode.com/graphql"
 
-          # ---------------------------------------------------------
-          # Fetch complete LeetCode problem list
-          # ---------------------------------------------------------
-
           QUERY = """
-          query problemsetQuestionList(
-              $categorySlug: String
-              $limit: Int
-              $skip: Int
-              $filters: QuestionListFilterInput
-          ) {
-              questionList(
-                  categorySlug: $categorySlug
-                  limit: $limit
-                  skip: $skip
-                  filters: $filters
-              ) {
-                  totalNum
-                  data {
-                      questionFrontendId
-                      title
-                      titleSlug
-                      difficulty
-                      topicTags {
-                          name
-                      }
-                  }
+          query questionData($titleSlug: String!) {
+            question(titleSlug: $titleSlug) {
+              questionId
+              title
+              difficulty
+              topicTags {
+                name
               }
+            }
           }
           """
 
-          def graphql(query, variables):
+          def get_problem(slug):
               payload = json.dumps({
-                  "query": query,
-                  "variables": variables
+                  "query": QUERY,
+                  "variables": {
+                      "titleSlug": slug
+                  }
               }).encode("utf-8")
 
               request = Request(
@@ -74,93 +56,40 @@ jobs:
                   data=payload,
                   headers={
                       "Content-Type": "application/json",
-                      "User-Agent": "Mozilla/5.0",
-                      "Referer": "https://leetcode.com/"
+                      "User-Agent": "Mozilla/5.0"
                   },
                   method="POST"
               )
 
-              with urlopen(request, timeout=30) as response:
+              with urlopen(request, timeout=20) as response:
                   return json.loads(
                       response.read().decode("utf-8")
                   )
 
-          # ---------------------------------------------------------
-          # Download all available LeetCode problems
-          # ---------------------------------------------------------
-
-          print("Fetching LeetCode problem database...")
-
-          all_problems = []
-          skip = 0
-          limit = 100
-
-          while True:
-
-              data = graphql(
-                  QUERY,
-                  {
-                      "categorySlug": "",
-                      "skip": skip,
-                      "limit": limit,
-                      "filters": {}
-                  }
+          def make_slug(folder_name):
+              name = re.sub(
+                  r"^\d+\s*[-]?\s*",
+                  "",
+                  folder_name
               )
 
-              question_list = (
-                  data.get("data", {})
-                      .get("questionList")
+              name = name.lower()
+
+              name = re.sub(
+                  r"[^a-z0-9]+",
+                  "-",
+                  name
               )
 
-              if not question_list:
-                  raise RuntimeError(
-                      "Could not fetch LeetCode problem list."
-                  )
-
-              problems = question_list.get("data", [])
-
-              if not problems:
-                  break
-
-              all_problems.extend(problems)
-
-              total = question_list.get("totalNum", 0)
-
-              print(
-                  f"Fetched {len(all_problems)}/{total} problems"
+              name = re.sub(
+                  r"-+",
+                  "-",
+                  name
               )
 
-              skip += limit
+              return name.strip("-")
 
-              if skip >= total:
-                  break
-
-              time.sleep(0.2)
-
-          print(
-              f"LeetCode database contains "
-              f"{len(all_problems)} problems."
-          )
-
-          # ---------------------------------------------------------
-          # Build lookup by problem number
-          # ---------------------------------------------------------
-
-          problem_by_id = {}
-
-          for problem in all_problems:
-
-              frontend_id = problem.get(
-                  "questionFrontendId"
-              )
-
-              if frontend_id:
-                  problem_by_id[str(frontend_id)] = problem
-
-          # ---------------------------------------------------------
           # Find solution folders
-          # ---------------------------------------------------------
-
           solution_dirs = []
 
           for path in Path(".").iterdir():
@@ -175,136 +104,93 @@ jobs:
               }:
                   continue
 
-              match = re.match(
-                  r"^(\d+)",
-                  path.name
-              )
-
-              if match:
-                  solution_dirs.append(
-                      (
-                          int(match.group(1)),
-                          path.name
-                      )
-                  )
+              if re.match(r"^\d+", path.name):
+                  solution_dirs.append(path.name)
 
           solution_dirs.sort()
 
-          print()
           print(
-              f"Found {len(solution_dirs)} "
-              f"solution folders."
+              f"Found {len(solution_dirs)} solution folders."
           )
 
           difficulties = Counter()
           topics = Counter()
 
-          failed = []
-
-          # ---------------------------------------------------------
-          # Process every solution
-          # ---------------------------------------------------------
-
-          for index, (problem_id, folder) in enumerate(
+          # Fetch LeetCode information
+          for index, folder in enumerate(
               solution_dirs,
               start=1
           ):
 
-              problem = problem_by_id.get(
-                  str(problem_id)
-              )
+              slug = make_slug(folder)
 
               print(
                   f"[{index}/{len(solution_dirs)}] "
-                  f"{folder}"
+                  f"{folder} -> {slug}"
               )
 
-              if not problem:
+              try:
+
+                  data = get_problem(slug)
+
+                  question = (
+                      data
+                      .get("data", {})
+                      .get("question")
+                  )
+
+                  if not question:
+                      print(
+                          "  WARNING: Problem not found"
+                      )
+                      continue
+
+                  difficulty = question.get(
+                      "difficulty"
+                  )
+
+                  if difficulty:
+                      difficulties[difficulty] += 1
+
+                  for tag in question.get(
+                      "topicTags",
+                      []
+                  ):
+
+                      topic_name = tag.get("name")
+
+                      if topic_name:
+                          topics[topic_name] += 1
+
+              except Exception as error:
 
                   print(
-                      "  WARNING: Problem ID not found"
+                      f"  ERROR: {error}"
                   )
 
-                  failed.append(folder)
-                  continue
+              time.sleep(0.15)
 
-              title = problem.get(
-                  "title",
-                  "Unknown"
-              )
-
-              slug = problem.get(
-                  "titleSlug",
-                  ""
-              )
-
-              difficulty = problem.get(
-                  "difficulty"
-              )
-
-              print(
-                  f"  -> {title}"
-              )
-
-              print(
-                  f"  -> slug: {slug}"
-              )
-
-              if difficulty:
-                  difficulties[difficulty] += 1
-
-              for tag in problem.get(
-                  "topicTags",
-                  []
-              ):
-
-                  topic_name = tag.get(
-                      "name"
-                  )
-
-                  if topic_name:
-                      topics[topic_name] += 1
-
-          # ---------------------------------------------------------
-          # Statistics
-          # ---------------------------------------------------------
-
-          total = sum(
-              difficulties.values()
-          )
-
-          easy = difficulties["Easy"]
-          medium = difficulties["Medium"]
-          hard = difficulties["Hard"]
+          total = sum(difficulties.values())
 
           print()
-          print("==============================")
+          print("================================")
           print("LeetCode Statistics")
-          print("==============================")
-          print(f"Easy:   {easy}")
-          print(f"Medium: {medium}")
-          print(f"Hard:   {hard}")
-          print(f"Total:  {total}")
+          print("================================")
+          print(
+              f"Easy:   {difficulties['Easy']}"
+          )
+          print(
+              f"Medium: {difficulties['Medium']}"
+          )
+          print(
+              f"Hard:   {difficulties['Hard']}"
+          )
+          print(
+              f"Total:  {total}"
+          )
 
-          if failed:
-
-              print()
-              print("Failed problems:")
-
-              for item in failed:
-                  print(
-                      f" - {item}"
-                  )
-
-          # ---------------------------------------------------------
           # Progress bar
-          # ---------------------------------------------------------
-
-          def bar(
-              value,
-              maximum,
-              length=30
-          ):
+          def bar(value, maximum, length=30):
 
               if maximum == 0:
                   return ""
@@ -315,47 +201,43 @@ jobs:
 
               return (
                   "█" * filled
-                  +
-                  "░" * (
-                      length - filled
-                  )
+                  + "░" * (length - filled)
               )
 
           maximum = max(
-              easy,
-              medium,
-              hard,
+              difficulties["Easy"],
+              difficulties["Medium"],
+              difficulties["Hard"],
               1
           )
 
-          # ---------------------------------------------------------
           # Difficulty section
-          # ---------------------------------------------------------
+          difficulty_section = f"""<!-- LEETCODE_STATS_START -->
 
-          difficulty_section = f"""## 📊 LeetCode Progress
+          ## 📊 LeetCode Progress
 
           | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
-          | :---: | :---: | :---: | :---: |
-          | **{easy}** | **{medium}** | **{hard}** | **{total}** |
+          |:---:|:---:|:---:|:---:|
+          | **{difficulties["Easy"]}** | **{difficulties["Medium"]}** | **{difficulties["Hard"]}** | **{total}** |
 
           ### Difficulty Distribution
 
           ```text
-          🟢 Easy       {easy:>4}  {bar(easy, maximum)}
-          🟡 Medium     {medium:>4}  {bar(medium, maximum)}
-          🔴 Hard       {hard:>4}  {bar(hard, maximum)}
+          🟢 Easy       {difficulties["Easy"]:>4}  {bar(difficulties["Easy"], maximum)}
+          🟡 Medium     {difficulties["Medium"]:>4}  {bar(difficulties["Medium"], maximum)}
+          🔴 Hard       {difficulties["Hard"]:>4}  {bar(difficulties["Hard"], maximum)}
           ```
-          """
 
-          # ---------------------------------------------------------
-          # Topic section
-          # ---------------------------------------------------------
+          <!-- LEETCODE_STATS_END -->"""
 
+          # Topics section
           topic_lines = [
+              "<!-- LEETCODE_TOPICS_START -->",
+              "",
               "## 🧠 Topics",
               "",
               "| Topic | Problems | Progress |",
-              "| :--- | ---: | :--- |"
+              "|:---|---:|:---|"
           ]
 
           max_topic = max(
@@ -372,70 +254,40 @@ jobs:
               )
 
               topic_lines.append(
-                  f"| {topic} | **{count}** | "
-                  f"`{topic_bar}` |"
+                  f"| {topic} | **{count}** | `{topic_bar}` |"
               )
 
-          topic_section = (
-              "\n".join(topic_lines)
-              + "\n"
+          topic_lines.extend([
+              "",
+              "<!-- LEETCODE_TOPICS_END -->"
+          ])
+
+          topic_section = "\n".join(
+              topic_lines
           )
 
-          # ---------------------------------------------------------
-          # Update README
-          # ---------------------------------------------------------
-
+          # Read README
           text = README.read_text(
               encoding="utf-8"
           )
 
-          # Remove old generated statistics
+          # Replace statistics section
           text = re.sub(
-              r"## 📊 LeetCode Progress.*?(?=## |\Z)",
-              "",
+              r"<!-- LEETCODE_STATS_START -->.*?<!-- LEETCODE_STATS_END -->",
+              difficulty_section,
               text,
               flags=re.S
           )
 
-          # Remove old generated topics
+          # Replace topics section
           text = re.sub(
-              r"## 🧠 Topics.*?(?=## |\Z)",
-              "",
+              r"<!-- LEETCODE_TOPICS_START -->.*?<!-- LEETCODE_TOPICS_END -->",
+              topic_section,
               text,
               flags=re.S
           )
 
-          marker = (
-              "A collection of my LeetCode solutions, "
-              "focused on Data Structures, Algorithms, "
-              "problem solving, and competitive programming."
-          )
-
-          generated = (
-              "\n\n"
-              + difficulty_section
-              + "\n"
-              + topic_section
-          )
-
-          if marker in text:
-
-              text = text.replace(
-                  marker,
-                  marker + generated,
-                  1
-              )
-
-          else:
-
-              text = (
-                  difficulty_section
-                  + "\n"
-                  + topic_section
-                  + "\n"
-                  + text
-              )
-
+          # Write README
           README.write_text(
               text,
               encoding="utf-8"
@@ -445,7 +297,6 @@ jobs:
           print(
               "README updated successfully."
           )
-
           PY
 
       - name: Commit README changes

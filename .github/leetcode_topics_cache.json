@@ -1016,6 +1016,11 @@
     "Math",
     "Enumeration"
   ],
+  "smallest-missing-integer-greater-than-sequential-prefix-sum": [
+    "Array",
+    "Hash Table",
+    "Sorting"
+  ],
   "smallest-palindromic-rearrangement-i": [
     "String",
     "Sorting",

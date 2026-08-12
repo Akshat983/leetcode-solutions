@@ -4,8 +4,28 @@
     "slug": "array",
     "name": "Array"
   },
-  "updatedAt": "2026-08-11T20:30:38.055Z",
+  "updatedAt": "2026-08-12T18:42:14.967Z",
   "problems": [
+    {
+      "frontendId": "2958",
+      "title": "Length of Longest Subarray With at Most K Frequency",
+      "slug": "length-of-longest-subarray-with-at-most-k-frequency",
+      "problemName": "2958-length-of-longest-subarray-with-at-most-k-frequency",
+      "difficulty": "Medium",
+      "leetcodeUrl": "https://leetcode.com/problems/length-of-longest-subarray-with-at-most-k-frequency/",
+      "folderPath": "2958-length-of-longest-subarray-with-at-most-k-frequency/",
+      "readmePath": "2958-length-of-longest-subarray-with-at-most-k-frequency/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "2958-length-of-longest-subarray-with-at-most-k-frequency.java",
+          "path": "2958-length-of-longest-subarray-with-at-most-k-frequency/2958-length-of-longest-subarray-with-at-most-k-frequency.java",
+          "sha": "eab7ae42c352b7268eb7b91047dcb996a18bb2bc",
+          "lastSyncedAt": "2026-08-12T18:42:14.967Z"
+        }
+      ]
+    },
     {
       "frontendId": "2996",
       "title": "Smallest Missing Integer Greater Than Sequential Prefix Sum",

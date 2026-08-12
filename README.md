@@ -45,13 +45,13 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
 | :---: | :---: | :---: | :---: |
-| **118** | **104** | **23** | **245** |
+| **118** | **105** | **23** | **246** |
 
 ### Difficulty Distribution
 
 ```text
 🟢 Easy        118  █████████████████████████
-🟡 Medium      104  ██████████████████████░░░
+🟡 Medium      105  ██████████████████████░░░
 🔴 Hard         23  █████░░░░░░░░░░░░░░░░░░░░
 ```
 <!-- LEETCODE-STATS:END -->
@@ -68,11 +68,11 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | Topic | Problems | Progress |
 | :--- | ---: | :--- |
-| Array | **126** | `█████████████████████████` |
+| Array | **127** | `█████████████████████████` |
 | String | **70** | `██████████████░░░░░░░░░░░` |
 | Math | **56** | `███████████░░░░░░░░░░░░░░` |
-| Hash Table | **50** | `██████████░░░░░░░░░░░░░░░` |
-| Two Pointers | **43** | `█████████░░░░░░░░░░░░░░░░` |
+| Hash Table | **51** | `██████████░░░░░░░░░░░░░░░` |
+| Two Pointers | **43** | `████████░░░░░░░░░░░░░░░░░` |
 | Sorting | **41** | `████████░░░░░░░░░░░░░░░░░` |
 | Binary Search | **30** | `██████░░░░░░░░░░░░░░░░░░░` |
 | Dynamic Programming | **26** | `█████░░░░░░░░░░░░░░░░░░░░` |
@@ -88,9 +88,9 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Backtracking | **8** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Monotonic Stack | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Counting | **6** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Sliding Window | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Bracket Sequences | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Enumeration | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
-| Sliding Window | **4** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Heap (Priority Queue) | **4** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Depth-First Search | **4** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Floyd's Cycle Finding Algorithm | **4** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |

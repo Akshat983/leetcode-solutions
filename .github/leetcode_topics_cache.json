@@ -501,6 +501,14 @@
     "Dynamic Programming",
     "Manacher"
   ],
+  "longest-string-chain": [
+    "Array",
+    "Hash Table",
+    "Two Pointers",
+    "String",
+    "Dynamic Programming",
+    "Sorting"
+  ],
   "longest-substring-without-repeating-characters": [
     "Hash Table",
     "String",

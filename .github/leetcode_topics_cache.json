@@ -288,6 +288,10 @@
     "Knuth\u2013Morris\u2013Pratt Algorithm",
     "Boyer\u2013Moore String-Search Algorithm"
   ],
+  "find-the-largest-almost-missing-integer": [
+    "Array",
+    "Hash Table"
+  ],
   "find-the-length-of-the-longest-common-prefix": [
     "Array",
     "Hash Table",

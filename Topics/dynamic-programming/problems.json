@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "topic": {
+    "slug": "dynamic-programming",
+    "name": "Dynamic Programming"
+  },
+  "updatedAt": "2026-08-18T20:07:58.010Z",
+  "problems": [
+    {
+      "frontendId": "1048",
+      "title": "Longest String Chain",
+      "slug": "longest-string-chain",
+      "problemName": "1048-longest-string-chain",
+      "difficulty": "Medium",
+      "leetcodeUrl": "https://leetcode.com/problems/longest-string-chain/",
+      "folderPath": "1048-longest-string-chain/",
+      "readmePath": "1048-longest-string-chain/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "1048-longest-string-chain.java",
+          "path": "1048-longest-string-chain/1048-longest-string-chain.java",
+          "sha": "7314e2e01d8ae58a809883d918d6421fb9184590",
+          "lastSyncedAt": "2026-08-18T20:07:58.010Z"
+        }
+      ]
+    }
+  ]
+}

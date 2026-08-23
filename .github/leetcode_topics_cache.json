@@ -1111,6 +1111,12 @@
     "Algorithm X",
     "Dancing Links"
   ],
+  "sum-game": [
+    "Math",
+    "String",
+    "Greedy",
+    "Game Theory"
+  ],
   "sum-of-gcd-of-formed-pairs": [
     "Array",
     "Math",

@@ -4,6 +4,27 @@
     "slug": "math",
     "name": "Math"
   },
-  "updatedAt": "2026-08-10T15:24:55.297Z",
-  "problems": []
+  "updatedAt": "2026-08-23T19:58:38.840Z",
+  "problems": [
+    {
+      "frontendId": "1927",
+      "title": "Sum Game",
+      "slug": "sum-game",
+      "problemName": "1927-sum-game",
+      "difficulty": "Medium",
+      "leetcodeUrl": "https://leetcode.com/problems/sum-game/",
+      "folderPath": "1927-sum-game/",
+      "readmePath": "1927-sum-game/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "1927-sum-game.java",
+          "path": "1927-sum-game/1927-sum-game.java",
+          "sha": "6a539a06172f1297f57411c095625acfdfbcbf93",
+          "lastSyncedAt": "2026-08-23T19:58:38.840Z"
+        }
+      ]
+    }
+  ]
 }

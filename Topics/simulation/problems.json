@@ -4,7 +4,7 @@
     "slug": "simulation",
     "name": "Simulation"
   },
-  "updatedAt": "2026-08-27T14:31:23.554Z",
+  "updatedAt": "2026-08-27T14:33:48.279Z",
   "problems": [
     {
       "frontendId": "3069",
@@ -23,6 +23,26 @@
           "path": "3069-distribute-elements-into-two-arrays-i/3069-distribute-elements-into-two-arrays-i.java",
           "sha": "f50ccc0fe72c6b4451f0b5c29ef3be5bd4f48d21",
           "lastSyncedAt": "2026-08-27T14:31:23.554Z"
+        }
+      ]
+    },
+    {
+      "frontendId": "4020",
+      "title": "Elevator Requests I",
+      "slug": "elevator-requests-i",
+      "problemName": "4020-elevator-requests-i",
+      "difficulty": "Easy",
+      "leetcodeUrl": "https://leetcode.com/problems/elevator-requests-i/",
+      "folderPath": "4020-elevator-requests-i/",
+      "readmePath": "4020-elevator-requests-i/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "4020-elevator-requests-i.java",
+          "path": "4020-elevator-requests-i/4020-elevator-requests-i.java",
+          "sha": "42f90119e7cf5e6773280a1577aaaf0f191a9274",
+          "lastSyncedAt": "2026-08-27T14:33:48.279Z"
         }
       ]
     }

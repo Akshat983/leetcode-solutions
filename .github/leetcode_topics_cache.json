@@ -203,6 +203,10 @@
     "Greedy",
     "Sorting"
   ],
+  "elevator-requests-i": [
+    "Array",
+    "Simulation"
+  ],
   "evaluate-reverse-polish-notation": [
     "Array",
     "Math",

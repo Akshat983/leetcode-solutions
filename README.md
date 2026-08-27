@@ -45,13 +45,13 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
 | :---: | :---: | :---: | :---: |
-| **119** | **107** | **23** | **249** |
+| **119** | **108** | **23** | **250** |
 
 ### Difficulty Distribution
 
 ```text
 🟢 Easy        119  █████████████████████████
-🟡 Medium      107  ██████████████████████░░░
+🟡 Medium      108  ███████████████████████░░
 🔴 Hard         23  █████░░░░░░░░░░░░░░░░░░░░
 ```
 <!-- LEETCODE-STATS:END -->
@@ -69,14 +69,14 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Topic | Problems | Progress |
 | :--- | ---: | :--- |
 | Array | **129** | `█████████████████████████` |
-| String | **72** | `██████████████░░░░░░░░░░░` |
+| String | **73** | `██████████████░░░░░░░░░░░` |
 | Math | **57** | `███████████░░░░░░░░░░░░░░` |
-| Hash Table | **53** | `██████████░░░░░░░░░░░░░░░` |
+| Hash Table | **54** | `██████████░░░░░░░░░░░░░░░` |
 | Two Pointers | **44** | `█████████░░░░░░░░░░░░░░░░` |
 | Sorting | **42** | `████████░░░░░░░░░░░░░░░░░` |
 | Binary Search | **30** | `██████░░░░░░░░░░░░░░░░░░░` |
 | Dynamic Programming | **27** | `█████░░░░░░░░░░░░░░░░░░░░` |
-| Greedy | **26** | `█████░░░░░░░░░░░░░░░░░░░░` |
+| Greedy | **27** | `█████░░░░░░░░░░░░░░░░░░░░` |
 | Simulation | **23** | `████░░░░░░░░░░░░░░░░░░░░░` |
 | Linked List | **21** | `████░░░░░░░░░░░░░░░░░░░░░` |
 | Stack | **21** | `████░░░░░░░░░░░░░░░░░░░░░` |
@@ -87,10 +87,10 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Prefix Sum | **9** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Backtracking | **8** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Monotonic Stack | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
-| Counting | **6** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Counting | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Enumeration | **6** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Sliding Window | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Bracket Sequences | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
-| Enumeration | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Heap (Priority Queue) | **4** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Depth-First Search | **4** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Floyd's Cycle Finding Algorithm | **4** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |

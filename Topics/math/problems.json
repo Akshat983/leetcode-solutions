@@ -4,7 +4,7 @@
     "slug": "math",
     "name": "Math"
   },
-  "updatedAt": "2026-08-27T14:32:19.161Z",
+  "updatedAt": "2026-08-27T14:33:01.910Z",
   "problems": [
     {
       "frontendId": "1872",
@@ -63,6 +63,26 @@
           "path": "2029-stone-game-ix/2029-stone-game-ix.java",
           "sha": "b0eb80fd3ca2e96b5096d94928ec9f734b8c44e8",
           "lastSyncedAt": "2026-08-27T14:32:19.161Z"
+        }
+      ]
+    },
+    {
+      "frontendId": "4022",
+      "title": "K-th Digit in Infinite String",
+      "slug": "k-th-digit-in-infinite-string",
+      "problemName": "4022-k-th-digit-in-infinite-string",
+      "difficulty": "Medium",
+      "leetcodeUrl": "https://leetcode.com/problems/k-th-digit-in-infinite-string/",
+      "folderPath": "4022-k-th-digit-in-infinite-string/",
+      "readmePath": "4022-k-th-digit-in-infinite-string/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "4022-k-th-digit-in-infinite-string.java",
+          "path": "4022-k-th-digit-in-infinite-string/4022-k-th-digit-in-infinite-string.java",
+          "sha": "081d5fb9f0bad5fc98cdb11787484c503c79e493",
+          "lastSyncedAt": "2026-08-27T14:33:01.910Z"
         }
       ]
     }

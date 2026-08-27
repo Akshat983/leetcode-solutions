@@ -4,8 +4,28 @@
     "slug": "array",
     "name": "Array"
   },
-  "updatedAt": "2026-08-27T14:33:48.279Z",
+  "updatedAt": "2026-08-27T14:35:07.230Z",
   "problems": [
+    {
+      "frontendId": "823",
+      "title": "Binary Trees With Factors",
+      "slug": "binary-trees-with-factors",
+      "problemName": "0823-binary-trees-with-factors",
+      "difficulty": "Medium",
+      "leetcodeUrl": "https://leetcode.com/problems/binary-trees-with-factors/",
+      "folderPath": "0823-binary-trees-with-factors/",
+      "readmePath": "0823-binary-trees-with-factors/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "0823-binary-trees-with-factors.java",
+          "path": "0823-binary-trees-with-factors/0823-binary-trees-with-factors.java",
+          "sha": "ff710dd90e9289d5464edf895212eafdb13c65c1",
+          "lastSyncedAt": "2026-08-27T14:35:07.230Z"
+        }
+      ]
+    },
     {
       "frontendId": "1048",
       "title": "Longest String Chain",

@@ -4,7 +4,7 @@
     "slug": "array",
     "name": "Array"
   },
-  "updatedAt": "2026-08-27T14:31:23.554Z",
+  "updatedAt": "2026-08-27T14:32:19.161Z",
   "problems": [
     {
       "frontendId": "1048",
@@ -43,6 +43,26 @@
           "path": "1872-stone-game-viii/1872-stone-game-viii.java",
           "sha": "de85712db6b09b2bf42d0c367687379dc5be501b",
           "lastSyncedAt": "2026-08-27T14:30:23.397Z"
+        }
+      ]
+    },
+    {
+      "frontendId": "2029",
+      "title": "Stone Game IX",
+      "slug": "stone-game-ix",
+      "problemName": "2029-stone-game-ix",
+      "difficulty": "Medium",
+      "leetcodeUrl": "https://leetcode.com/problems/stone-game-ix/",
+      "folderPath": "2029-stone-game-ix/",
+      "readmePath": "2029-stone-game-ix/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "2029-stone-game-ix.java",
+          "path": "2029-stone-game-ix/2029-stone-game-ix.java",
+          "sha": "b0eb80fd3ca2e96b5096d94928ec9f734b8c44e8",
+          "lastSyncedAt": "2026-08-27T14:32:19.161Z"
         }
       ]
     },

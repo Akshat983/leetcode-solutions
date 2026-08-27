@@ -4,7 +4,7 @@
     "slug": "greedy",
     "name": "Greedy"
   },
-  "updatedAt": "2026-08-23T19:58:38.840Z",
+  "updatedAt": "2026-08-27T13:36:48.680Z",
   "problems": [
     {
       "frontendId": "409",
@@ -43,6 +43,26 @@
           "path": "1927-sum-game/1927-sum-game.java",
           "sha": "6a539a06172f1297f57411c095625acfdfbcbf93",
           "lastSyncedAt": "2026-08-23T19:58:38.840Z"
+        }
+      ]
+    },
+    {
+      "frontendId": "3720",
+      "title": "Lexicographically Smallest Permutation Greater Than Target",
+      "slug": "lexicographically-smallest-permutation-greater-than-target",
+      "problemName": "3720-lexicographically-smallest-permutation-greater-than-target",
+      "difficulty": "Medium",
+      "leetcodeUrl": "https://leetcode.com/problems/lexicographically-smallest-permutation-greater-than-target/",
+      "folderPath": "3720-lexicographically-smallest-permutation-greater-than-target/",
+      "readmePath": "3720-lexicographically-smallest-permutation-greater-than-target/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "3720-lexicographically-smallest-permutation-greater-than-target.java",
+          "path": "3720-lexicographically-smallest-permutation-greater-than-target/3720-lexicographically-smallest-permutation-greater-than-target.java",
+          "sha": "47e68a614e3c73257ffd4f8163db4b0a1d495ab0",
+          "lastSyncedAt": "2026-08-27T13:36:48.680Z"
         }
       ]
     }

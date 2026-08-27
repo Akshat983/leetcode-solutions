@@ -4,7 +4,7 @@
     "slug": "array",
     "name": "Array"
   },
-  "updatedAt": "2026-08-27T14:35:07.230Z",
+  "updatedAt": "2026-08-27T14:44:49.618Z",
   "problems": [
     {
       "frontendId": "823",
@@ -163,6 +163,26 @@
           "path": "3471-find-the-largest-almost-missing-integer/3471-find-the-largest-almost-missing-integer.java",
           "sha": "b16fa4688f738b7512de5faff9aa38430f454e8b",
           "lastSyncedAt": "2026-08-18T19:24:01.470Z"
+        }
+      ]
+    },
+    {
+      "frontendId": "3718",
+      "title": "Smallest Missing Multiple of K",
+      "slug": "smallest-missing-multiple-of-k",
+      "problemName": "3718-smallest-missing-multiple-of-k",
+      "difficulty": "Easy",
+      "leetcodeUrl": "https://leetcode.com/problems/smallest-missing-multiple-of-k/",
+      "folderPath": "3718-smallest-missing-multiple-of-k/",
+      "readmePath": "3718-smallest-missing-multiple-of-k/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "3718-smallest-missing-multiple-of-k.java",
+          "path": "3718-smallest-missing-multiple-of-k/3718-smallest-missing-multiple-of-k.java",
+          "sha": "5c32cc47a9592e586d6aafc238eaf6927ea931b7",
+          "lastSyncedAt": "2026-08-27T14:44:49.618Z"
         }
       ]
     },

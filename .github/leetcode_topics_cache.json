@@ -181,6 +181,10 @@
     "Matrix",
     "Simulation"
   ],
+  "distribute-elements-into-two-arrays-i": [
+    "Array",
+    "Simulation"
+  ],
   "divide-two-integers": [
     "Math",
     "Bit Manipulation"
@@ -1105,6 +1109,15 @@
     "Game Theory",
     "Nim Game",
     "Sprague\u2013Grundy Theorem",
+    "Zero-Sum Game"
+  ],
+  "stone-game-viii": [
+    "Array",
+    "Math",
+    "Dynamic Programming",
+    "Minimax",
+    "Prefix Sum",
+    "Game Theory",
     "Zero-Sum Game"
   ],
   "string-to-integer-atoi": [

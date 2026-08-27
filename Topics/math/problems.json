@@ -4,7 +4,7 @@
     "slug": "math",
     "name": "Math"
   },
-  "updatedAt": "2026-08-27T14:33:01.910Z",
+  "updatedAt": "2026-08-27T14:33:23.512Z",
   "problems": [
     {
       "frontendId": "1872",
@@ -63,6 +63,26 @@
           "path": "2029-stone-game-ix/2029-stone-game-ix.java",
           "sha": "b0eb80fd3ca2e96b5096d94928ec9f734b8c44e8",
           "lastSyncedAt": "2026-08-27T14:32:19.161Z"
+        }
+      ]
+    },
+    {
+      "frontendId": "4021",
+      "title": "Minimum Operations to Make a Rotated Palindrome I",
+      "slug": "minimum-operations-to-make-a-rotated-palindrome-i",
+      "problemName": "4021-minimum-operations-to-make-a-rotated-palindrome-i",
+      "difficulty": "Medium",
+      "leetcodeUrl": "https://leetcode.com/problems/minimum-operations-to-make-a-rotated-palindrome-i/",
+      "folderPath": "4021-minimum-operations-to-make-a-rotated-palindrome-i/",
+      "readmePath": "4021-minimum-operations-to-make-a-rotated-palindrome-i/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "4021-minimum-operations-to-make-a-rotated-palindrome-i.java",
+          "path": "4021-minimum-operations-to-make-a-rotated-palindrome-i/4021-minimum-operations-to-make-a-rotated-palindrome-i.java",
+          "sha": "b40238798defe41f2106d5e43302c94ec86f6ab6",
+          "lastSyncedAt": "2026-08-27T14:33:23.512Z"
         }
       ]
     },

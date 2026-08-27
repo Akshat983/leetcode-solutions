@@ -720,6 +720,11 @@
     "String",
     "Greedy"
   ],
+  "minimum-operations-to-make-a-rotated-palindrome-i": [
+    "Math",
+    "String",
+    "Enumeration"
+  ],
   "missing-number": [
     "Array",
     "Hash Table",

@@ -534,6 +534,10 @@
     "Dynamic Programming",
     "Sorting"
   ],
+  "longest-subsequence-with-non-zero-bitwise-xor": [
+    "Array",
+    "Bit Manipulation"
+  ],
   "longest-substring-without-repeating-characters": [
     "Hash Table",
     "String",

@@ -4,7 +4,7 @@
     "slug": "counting",
     "name": "Counting"
   },
-  "updatedAt": "2026-08-27T13:36:48.680Z",
+  "updatedAt": "2026-08-27T14:32:19.161Z",
   "problems": [
     {
       "frontendId": "383",
@@ -43,6 +43,26 @@
           "path": "0387-first-unique-character-in-a-string/0387-first-unique-character-in-a-string.java",
           "sha": "4134bf109b90f8ba57bee311d78cbeff43babfca",
           "lastSyncedAt": "2026-08-10T15:43:49.338Z"
+        }
+      ]
+    },
+    {
+      "frontendId": "2029",
+      "title": "Stone Game IX",
+      "slug": "stone-game-ix",
+      "problemName": "2029-stone-game-ix",
+      "difficulty": "Medium",
+      "leetcodeUrl": "https://leetcode.com/problems/stone-game-ix/",
+      "folderPath": "2029-stone-game-ix/",
+      "readmePath": "2029-stone-game-ix/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "2029-stone-game-ix.java",
+          "path": "2029-stone-game-ix/2029-stone-game-ix.java",
+          "sha": "b0eb80fd3ca2e96b5096d94928ec9f734b8c44e8",
+          "lastSyncedAt": "2026-08-27T14:32:19.161Z"
         }
       ]
     },

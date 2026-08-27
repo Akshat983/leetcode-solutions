@@ -1111,6 +1111,16 @@
     "Sprague\u2013Grundy Theorem",
     "Zero-Sum Game"
   ],
+  "stone-game-ix": [
+    "Array",
+    "Math",
+    "Greedy",
+    "Minimax",
+    "Counting",
+    "Game Theory",
+    "Nim Game",
+    "Zero-Sum Game"
+  ],
   "stone-game-viii": [
     "Array",
     "Math",

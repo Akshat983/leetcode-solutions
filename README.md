@@ -45,13 +45,13 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
 | :---: | :---: | :---: | :---: |
-| **120** | **108** | **24** | **252** |
+| **120** | **109** | **24** | **253** |
 
 ### Difficulty Distribution
 
 ```text
 🟢 Easy        120  █████████████████████████
-🟡 Medium      108  ██████████████████████░░░
+🟡 Medium      109  ███████████████████████░░
 🔴 Hard         24  █████░░░░░░░░░░░░░░░░░░░░
 ```
 <!-- LEETCODE-STATS:END -->
@@ -68,15 +68,15 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | Topic | Problems | Progress |
 | :--- | ---: | :--- |
-| Array | **131** | `█████████████████████████` |
+| Array | **132** | `█████████████████████████` |
 | String | **73** | `██████████████░░░░░░░░░░░` |
-| Math | **58** | `███████████░░░░░░░░░░░░░░` |
+| Math | **59** | `███████████░░░░░░░░░░░░░░` |
 | Hash Table | **54** | `██████████░░░░░░░░░░░░░░░` |
 | Two Pointers | **44** | `████████░░░░░░░░░░░░░░░░░` |
 | Sorting | **42** | `████████░░░░░░░░░░░░░░░░░` |
 | Binary Search | **30** | `██████░░░░░░░░░░░░░░░░░░░` |
 | Dynamic Programming | **28** | `█████░░░░░░░░░░░░░░░░░░░░` |
-| Greedy | **27** | `█████░░░░░░░░░░░░░░░░░░░░` |
+| Greedy | **28** | `█████░░░░░░░░░░░░░░░░░░░░` |
 | Simulation | **24** | `█████░░░░░░░░░░░░░░░░░░░░` |
 | Linked List | **21** | `████░░░░░░░░░░░░░░░░░░░░░` |
 | Stack | **21** | `████░░░░░░░░░░░░░░░░░░░░░` |
@@ -86,18 +86,18 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Divide and Conquer | **10** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Prefix Sum | **10** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Backtracking | **8** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
+| Counting | **8** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Monotonic Stack | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
-| Counting | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Game Theory | **6** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Enumeration | **6** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Sliding Window | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Bracket Sequences | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
-| Game Theory | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Minimax | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Zero-Sum Game | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Heap (Priority Queue) | **4** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Depth-First Search | **4** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Floyd's Cycle Finding Algorithm | **4** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Breadth-First Search | **4** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
-| Minimax | **4** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
-| Zero-Sum Game | **4** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Merge Sort | **3** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Algorithm X | **3** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Quicksort | **3** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
@@ -108,6 +108,7 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Boyer–Moore Majority Vote Algorithm | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Queue | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Interactive | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Nim Game | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Counting Sort | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Graph Theory | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Segment Tree | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
@@ -128,7 +129,6 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Longest Increasing Subsequence | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Ternary Search | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Timsort | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
-| Nim Game | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Sprague–Grundy Theorem | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Euclidean Algorithm | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Greatest Common Divisor | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |

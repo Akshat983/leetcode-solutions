@@ -48,6 +48,12 @@
     "Array",
     "Binary Search"
   ],
+  "binary-trees-with-factors": [
+    "Array",
+    "Hash Table",
+    "Dynamic Programming",
+    "Sorting"
+  ],
   "binary-watch": [
     "Backtracking",
     "Bit Manipulation"

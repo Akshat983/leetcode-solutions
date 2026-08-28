@@ -771,6 +771,14 @@
     "Stack",
     "Monotonic Stack"
   ],
+  "nim-game": [
+    "Math",
+    "Brainteaser",
+    "Minimax",
+    "Game Theory",
+    "Nim Game",
+    "Impartial Game"
+  ],
   "nth-digit": [
     "Math",
     "Binary Search"

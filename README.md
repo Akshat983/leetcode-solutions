@@ -45,12 +45,12 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
 | :---: | :---: | :---: | :---: |
-| **122** | **113** | **24** | **259** |
+| **123** | **113** | **24** | **260** |
 
 ### Difficulty Distribution
 
 ```text
-🟢 Easy        122  █████████████████████████
+🟢 Easy        123  █████████████████████████
 🟡 Medium      113  ███████████████████████░░
 🔴 Hard         24  █████░░░░░░░░░░░░░░░░░░░░
 ```
@@ -70,7 +70,7 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | :--- | ---: | :--- |
 | Array | **136** | `█████████████████████████` |
 | String | **74** | `██████████████░░░░░░░░░░░` |
-| Math | **61** | `███████████░░░░░░░░░░░░░░` |
+| Math | **62** | `███████████░░░░░░░░░░░░░░` |
 | Hash Table | **56** | `██████████░░░░░░░░░░░░░░░` |
 | Two Pointers | **44** | `████████░░░░░░░░░░░░░░░░░` |
 | Sorting | **43** | `████████░░░░░░░░░░░░░░░░░` |
@@ -88,11 +88,11 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Backtracking | **8** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Counting | **8** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Monotonic Stack | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Game Theory | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Enumeration | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
-| Game Theory | **6** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Minimax | **6** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Sliding Window | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Bracket Sequences | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
-| Minimax | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Zero-Sum Game | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Heap (Priority Queue) | **4** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Depth-First Search | **4** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
@@ -102,13 +102,13 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Algorithm X | **3** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Quicksort | **3** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Design | **3** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Nim Game | **3** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Number Theory | **3** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Trie | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Memoization | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Boyer–Moore Majority Vote Algorithm | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Queue | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Interactive | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
-| Nim Game | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Counting Sort | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Graph Theory | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Segment Tree | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
@@ -126,6 +126,8 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Union-Find | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Quickselect | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Pigeonhole Principle | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Brainteaser | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Impartial Game | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Longest Increasing Subsequence | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Ternary Search | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Timsort | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |

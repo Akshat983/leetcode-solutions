@@ -4,8 +4,28 @@
     "slug": "math",
     "name": "Math"
   },
-  "updatedAt": "2026-08-27T14:33:23.512Z",
+  "updatedAt": "2026-08-28T21:45:33.207Z",
   "problems": [
+    {
+      "frontendId": "292",
+      "title": "Nim Game",
+      "slug": "nim-game",
+      "problemName": "0292-nim-game",
+      "difficulty": "Easy",
+      "leetcodeUrl": "https://leetcode.com/problems/nim-game/",
+      "folderPath": "0292-nim-game/",
+      "readmePath": "0292-nim-game/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "0292-nim-game.java",
+          "path": "0292-nim-game/0292-nim-game.java",
+          "sha": "543865fc8eb839116284dd184cd00f4aa80edd6e",
+          "lastSyncedAt": "2026-08-28T21:45:33.207Z"
+        }
+      ]
+    },
     {
       "frontendId": "1872",
       "title": "Stone Game VIII",

@@ -689,6 +689,7 @@
     "Greedy",
     "Bracket Sequences"
   ],
+  "minimum-bishop-moves-to-reach-target": [],
   "minimum-common-value": [
     "Array",
     "Hash Table",

@@ -950,6 +950,10 @@
     "Linked List",
     "Two Pointers"
   ],
+  "removing-minimum-and-maximum-from-array": [
+    "Array",
+    "Greedy"
+  ],
   "removing-stars-from-a-string": [
     "String",
     "Stack",

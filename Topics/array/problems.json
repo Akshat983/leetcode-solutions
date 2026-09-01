@@ -4,7 +4,7 @@
     "slug": "array",
     "name": "Array"
   },
-  "updatedAt": "2026-08-27T14:45:17.121Z",
+  "updatedAt": "2026-09-01T16:27:35.804Z",
   "problems": [
     {
       "frontendId": "823",
@@ -163,6 +163,26 @@
           "path": "3471-find-the-largest-almost-missing-integer/3471-find-the-largest-almost-missing-integer.java",
           "sha": "b16fa4688f738b7512de5faff9aa38430f454e8b",
           "lastSyncedAt": "2026-08-18T19:24:01.470Z"
+        }
+      ]
+    },
+    {
+      "frontendId": "3568",
+      "title": "Minimum Moves to Clean the Classroom",
+      "slug": "minimum-moves-to-clean-the-classroom",
+      "problemName": "3568-minimum-moves-to-clean-the-classroom",
+      "difficulty": "Medium",
+      "leetcodeUrl": "https://leetcode.com/problems/minimum-moves-to-clean-the-classroom/",
+      "folderPath": "3568-minimum-moves-to-clean-the-classroom/",
+      "readmePath": "3568-minimum-moves-to-clean-the-classroom/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "3568-minimum-moves-to-clean-the-classroom.java",
+          "path": "3568-minimum-moves-to-clean-the-classroom/3568-minimum-moves-to-clean-the-classroom.java",
+          "sha": "7c51154096a342a0bf43c78e49e6005b151ed83d",
+          "lastSyncedAt": "2026-09-01T16:27:35.804Z"
         }
       ]
     },

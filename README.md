@@ -45,13 +45,13 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
 | :---: | :---: | :---: | :---: |
-| **123** | **113** | **24** | **260** |
+| **123** | **114** | **24** | **261** |
 
 ### Difficulty Distribution
 
 ```text
 🟢 Easy        123  █████████████████████████
-🟡 Medium      113  ███████████████████████░░
+🟡 Medium      114  ███████████████████████░░
 🔴 Hard         24  █████░░░░░░░░░░░░░░░░░░░░
 ```
 <!-- LEETCODE-STATS:END -->
@@ -68,10 +68,10 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | Topic | Problems | Progress |
 | :--- | ---: | :--- |
-| Array | **136** | `█████████████████████████` |
+| Array | **137** | `█████████████████████████` |
 | String | **74** | `██████████████░░░░░░░░░░░` |
 | Math | **62** | `███████████░░░░░░░░░░░░░░` |
-| Hash Table | **56** | `██████████░░░░░░░░░░░░░░░` |
+| Hash Table | **57** | `██████████░░░░░░░░░░░░░░░` |
 | Two Pointers | **44** | `████████░░░░░░░░░░░░░░░░░` |
 | Sorting | **43** | `████████░░░░░░░░░░░░░░░░░` |
 | Binary Search | **31** | `██████░░░░░░░░░░░░░░░░░░░` |
@@ -80,9 +80,9 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Simulation | **25** | `█████░░░░░░░░░░░░░░░░░░░░` |
 | Linked List | **21** | `████░░░░░░░░░░░░░░░░░░░░░` |
 | Stack | **21** | `████░░░░░░░░░░░░░░░░░░░░░` |
-| Bit Manipulation | **20** | `████░░░░░░░░░░░░░░░░░░░░░` |
+| Bit Manipulation | **21** | `████░░░░░░░░░░░░░░░░░░░░░` |
 | Recursion | **14** | `███░░░░░░░░░░░░░░░░░░░░░░` |
-| Matrix | **13** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
+| Matrix | **14** | `███░░░░░░░░░░░░░░░░░░░░░░` |
 | Divide and Conquer | **10** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Prefix Sum | **10** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Backtracking | **8** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
@@ -93,11 +93,11 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Minimax | **6** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Sliding Window | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Bracket Sequences | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Breadth-First Search | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Zero-Sum Game | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Heap (Priority Queue) | **4** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Depth-First Search | **4** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Floyd's Cycle Finding Algorithm | **4** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
-| Breadth-First Search | **4** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Merge Sort | **3** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Algorithm X | **3** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Quicksort | **3** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |

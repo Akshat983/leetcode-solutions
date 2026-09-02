@@ -45,13 +45,13 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
 | :---: | :---: | :---: | :---: |
-| **124** | **118** | **24** | **266** |
+| **124** | **119** | **24** | **267** |
 
 ### Difficulty Distribution
 
 ```text
 🟢 Easy        124  █████████████████████████
-🟡 Medium      118  ████████████████████████░
+🟡 Medium      119  ████████████████████████░
 🔴 Hard         24  █████░░░░░░░░░░░░░░░░░░░░
 ```
 <!-- LEETCODE-STATS:END -->

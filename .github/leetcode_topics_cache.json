@@ -498,6 +498,7 @@
     "String",
     "Backtracking"
   ],
+  "lexicographically-largest-string-after-pair-transformations": [],
   "lexicographically-smallest-permutation-greater-than-target": [
     "Hash Table",
     "String",

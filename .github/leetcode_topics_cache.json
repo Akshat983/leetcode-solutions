@@ -114,6 +114,10 @@
     "Array",
     "Simulation"
   ],
+  "construct-uniform-parity-array-i": [
+    "Array",
+    "Math"
+  ],
   "container-with-most-water": [
     "Array",
     "Two Pointers",

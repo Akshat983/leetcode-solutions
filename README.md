@@ -45,13 +45,13 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
 | :---: | :---: | :---: | :---: |
-| **124** | **117** | **24** | **265** |
+| **124** | **118** | **24** | **266** |
 
 ### Difficulty Distribution
 
 ```text
 🟢 Easy        124  █████████████████████████
-🟡 Medium      117  ████████████████████████░
+🟡 Medium      118  ████████████████████████░
 🔴 Hard         24  █████░░░░░░░░░░░░░░░░░░░░
 ```
 <!-- LEETCODE-STATS:END -->
@@ -85,7 +85,7 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Matrix | **14** | `███░░░░░░░░░░░░░░░░░░░░░░` |
 | Divide and Conquer | **10** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Prefix Sum | **10** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
-| Backtracking | **8** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Backtracking | **9** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Counting | **8** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Monotonic Stack | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Game Theory | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |

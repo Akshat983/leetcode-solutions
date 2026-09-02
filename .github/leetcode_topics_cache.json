@@ -107,6 +107,9 @@
     "Array",
     "Backtracking"
   ],
+  "combinations": [
+    "Backtracking"
+  ],
   "concatenate-non-zero-digits-and-multiply-by-sum-i": [
     "Math"
   ],

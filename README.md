@@ -45,13 +45,13 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
 | :---: | :---: | :---: | :---: |
-| **124** | **119** | **24** | **267** |
+| **124** | **120** | **24** | **268** |
 
 ### Difficulty Distribution
 
 ```text
 🟢 Easy        124  █████████████████████████
-🟡 Medium      119  ████████████████████████░
+🟡 Medium      120  ████████████████████████░
 🔴 Hard         24  █████░░░░░░░░░░░░░░░░░░░░
 ```
 <!-- LEETCODE-STATS:END -->
@@ -68,9 +68,9 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | Topic | Problems | Progress |
 | :--- | ---: | :--- |
-| Array | **139** | `█████████████████████████` |
+| Array | **140** | `█████████████████████████` |
 | String | **74** | `█████████████░░░░░░░░░░░░` |
-| Math | **63** | `███████████░░░░░░░░░░░░░░` |
+| Math | **64** | `███████████░░░░░░░░░░░░░░` |
 | Hash Table | **57** | `██████████░░░░░░░░░░░░░░░` |
 | Two Pointers | **44** | `████████░░░░░░░░░░░░░░░░░` |
 | Sorting | **43** | `████████░░░░░░░░░░░░░░░░░` |
@@ -81,8 +81,8 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Linked List | **21** | `████░░░░░░░░░░░░░░░░░░░░░` |
 | Stack | **21** | `████░░░░░░░░░░░░░░░░░░░░░` |
 | Bit Manipulation | **21** | `████░░░░░░░░░░░░░░░░░░░░░` |
-| Recursion | **14** | `███░░░░░░░░░░░░░░░░░░░░░░` |
-| Matrix | **14** | `███░░░░░░░░░░░░░░░░░░░░░░` |
+| Recursion | **14** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
+| Matrix | **14** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Divide and Conquer | **10** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Prefix Sum | **10** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Backtracking | **9** | `██░░░░░░░░░░░░░░░░░░░░░░░` |

@@ -1114,6 +1114,10 @@
     "Sorting",
     "Counting Sort"
   ],
+  "smallest-stable-index-ii": [
+    "Array",
+    "Prefix Sum"
+  ],
   "smallest-subsequence-of-distinct-characters": [
     "String",
     "Stack",

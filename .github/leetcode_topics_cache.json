@@ -615,6 +615,10 @@
     "Dynamic Programming",
     "Matrix"
   ],
+  "maximum-average-subarray-i": [
+    "Array",
+    "Sliding Window"
+  ],
   "maximum-element-after-decreasing-and-rearranging": [
     "Array",
     "Greedy",

@@ -45,12 +45,12 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
 | :---: | :---: | :---: | :---: |
-| **124** | **121** | **24** | **269** |
+| **125** | **121** | **24** | **270** |
 
 ### Difficulty Distribution
 
 ```text
-🟢 Easy        124  █████████████████████████
+🟢 Easy        125  █████████████████████████
 🟡 Medium      121  ████████████████████████░
 🔴 Hard         24  █████░░░░░░░░░░░░░░░░░░░░
 ```
@@ -68,7 +68,7 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | Topic | Problems | Progress |
 | :--- | ---: | :--- |
-| Array | **141** | `█████████████████████████` |
+| Array | **142** | `█████████████████████████` |
 | String | **74** | `█████████████░░░░░░░░░░░░` |
 | Math | **64** | `███████████░░░░░░░░░░░░░░` |
 | Hash Table | **57** | `██████████░░░░░░░░░░░░░░░` |
@@ -90,8 +90,8 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Monotonic Stack | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Game Theory | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Enumeration | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Sliding Window | **6** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Minimax | **6** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
-| Sliding Window | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Bracket Sequences | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Breadth-First Search | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Zero-Sum Game | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |

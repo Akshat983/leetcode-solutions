@@ -4,7 +4,7 @@
     "slug": "math",
     "name": "Math"
   },
-  "updatedAt": "2026-09-03T19:00:27.589Z",
+  "updatedAt": "2026-09-14T09:46:52.452Z",
   "problems": [
     {
       "frontendId": "292",
@@ -23,6 +23,26 @@
           "path": "0292-nim-game/0292-nim-game.java",
           "sha": "543865fc8eb839116284dd184cd00f4aa80edd6e",
           "lastSyncedAt": "2026-08-28T21:45:33.207Z"
+        }
+      ]
+    },
+    {
+      "frontendId": "836",
+      "title": "Rectangle Overlap",
+      "slug": "rectangle-overlap",
+      "problemName": "0836-rectangle-overlap",
+      "difficulty": "Easy",
+      "leetcodeUrl": "https://leetcode.com/problems/rectangle-overlap/",
+      "folderPath": "0836-rectangle-overlap/",
+      "readmePath": "0836-rectangle-overlap/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "0836-rectangle-overlap.java",
+          "path": "0836-rectangle-overlap/0836-rectangle-overlap.java",
+          "sha": "79c973b7956bf44acbdbc0035e995afe3be86dc9",
+          "lastSyncedAt": "2026-09-14T09:46:52.452Z"
         }
       ]
     },

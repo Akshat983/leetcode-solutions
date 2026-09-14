@@ -45,12 +45,12 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
 | :---: | :---: | :---: | :---: |
-| **125** | **121** | **24** | **270** |
+| **126** | **121** | **24** | **271** |
 
 ### Difficulty Distribution
 
 ```text
-🟢 Easy        125  █████████████████████████
+🟢 Easy        126  █████████████████████████
 🟡 Medium      121  ████████████████████████░
 🔴 Hard         24  █████░░░░░░░░░░░░░░░░░░░░
 ```
@@ -70,7 +70,7 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | :--- | ---: | :--- |
 | Array | **142** | `█████████████████████████` |
 | String | **74** | `█████████████░░░░░░░░░░░░` |
-| Math | **64** | `███████████░░░░░░░░░░░░░░` |
+| Math | **65** | `███████████░░░░░░░░░░░░░░` |
 | Hash Table | **57** | `██████████░░░░░░░░░░░░░░░` |
 | Two Pointers | **44** | `████████░░░░░░░░░░░░░░░░░` |
 | Sorting | **43** | `████████░░░░░░░░░░░░░░░░░` |
@@ -129,6 +129,7 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Brainteaser | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Impartial Game | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Longest Increasing Subsequence | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Geometry | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Ternary Search | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Timsort | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Sprague–Grundy Theorem | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |

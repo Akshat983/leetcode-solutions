@@ -4,8 +4,28 @@
     "slug": "two-pointers",
     "name": "Two Pointers"
   },
-  "updatedAt": "2026-08-18T20:07:58.010Z",
+  "updatedAt": "2026-09-14T10:19:00.848Z",
   "problems": [
+    {
+      "frontendId": "18",
+      "title": "4Sum",
+      "slug": "4sum",
+      "problemName": "0018-4sum",
+      "difficulty": "Medium",
+      "leetcodeUrl": "https://leetcode.com/problems/4sum/",
+      "folderPath": "0018-4sum/",
+      "readmePath": "0018-4sum/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "0018-4sum.java",
+          "path": "0018-4sum/0018-4sum.java",
+          "sha": "9dcec0a5496c8fb9b55dd576ec61c5aacfb31f1b",
+          "lastSyncedAt": "2026-09-14T10:19:00.848Z"
+        }
+      ]
+    },
     {
       "frontendId": "1048",
       "title": "Longest String Chain",

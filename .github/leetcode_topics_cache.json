@@ -98,6 +98,10 @@
     "Hash Table",
     "String"
   ],
+  "circle-and-rectangle-overlapping": [
+    "Math",
+    "Geometry"
+  ],
   "climbing-stairs": [
     "Math",
     "Dynamic Programming",

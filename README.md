@@ -45,13 +45,13 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
 | :---: | :---: | :---: | :---: |
-| **126** | **122** | **24** | **272** |
+| **126** | **123** | **24** | **273** |
 
 ### Difficulty Distribution
 
 ```text
 🟢 Easy        126  █████████████████████████
-🟡 Medium      122  ████████████████████████░
+🟡 Medium      123  ████████████████████████░
 🔴 Hard         24  █████░░░░░░░░░░░░░░░░░░░░
 ```
 <!-- LEETCODE-STATS:END -->
@@ -70,7 +70,7 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | :--- | ---: | :--- |
 | Array | **143** | `█████████████████████████` |
 | String | **74** | `█████████████░░░░░░░░░░░░` |
-| Math | **65** | `███████████░░░░░░░░░░░░░░` |
+| Math | **66** | `████████████░░░░░░░░░░░░░` |
 | Hash Table | **57** | `██████████░░░░░░░░░░░░░░░` |
 | Two Pointers | **45** | `████████░░░░░░░░░░░░░░░░░` |
 | Sorting | **44** | `████████░░░░░░░░░░░░░░░░░` |
@@ -109,6 +109,7 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Boyer–Moore Majority Vote Algorithm | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Queue | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Interactive | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Geometry | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Counting Sort | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Graph Theory | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Segment Tree | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
@@ -129,7 +130,6 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Brainteaser | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Impartial Game | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Longest Increasing Subsequence | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
-| Geometry | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Ternary Search | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Timsort | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Sprague–Grundy Theorem | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |

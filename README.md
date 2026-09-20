@@ -45,12 +45,12 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
 | :---: | :---: | :---: | :---: |
-| **126** | **123** | **24** | **273** |
+| **127** | **123** | **24** | **274** |
 
 ### Difficulty Distribution
 
 ```text
-🟢 Easy        126  █████████████████████████
+🟢 Easy        127  █████████████████████████
 🟡 Medium      123  ████████████████████████░
 🔴 Hard         24  █████░░░░░░░░░░░░░░░░░░░░
 ```
@@ -69,7 +69,7 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Topic | Problems | Progress |
 | :--- | ---: | :--- |
 | Array | **143** | `█████████████████████████` |
-| String | **74** | `█████████████░░░░░░░░░░░░` |
+| String | **75** | `█████████████░░░░░░░░░░░░` |
 | Math | **66** | `████████████░░░░░░░░░░░░░` |
 | Hash Table | **57** | `██████████░░░░░░░░░░░░░░░` |
 | Two Pointers | **45** | `████████░░░░░░░░░░░░░░░░░` |
@@ -77,7 +77,7 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Binary Search | **31** | `█████░░░░░░░░░░░░░░░░░░░░` |
 | Dynamic Programming | **29** | `█████░░░░░░░░░░░░░░░░░░░░` |
 | Greedy | **29** | `█████░░░░░░░░░░░░░░░░░░░░` |
-| Simulation | **25** | `████░░░░░░░░░░░░░░░░░░░░░` |
+| Simulation | **26** | `█████░░░░░░░░░░░░░░░░░░░░` |
 | Linked List | **21** | `████░░░░░░░░░░░░░░░░░░░░░` |
 | Stack | **21** | `████░░░░░░░░░░░░░░░░░░░░░` |
 | Bit Manipulation | **21** | `████░░░░░░░░░░░░░░░░░░░░░` |

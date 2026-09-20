@@ -1000,6 +1000,10 @@
     "Divide and Conquer",
     "Bit Manipulation"
   ],
+  "reverse-degree-of-a-string": [
+    "String",
+    "Simulation"
+  ],
   "reverse-integer": [
     "Math"
   ],

@@ -238,6 +238,11 @@
     "Math",
     "Stack"
   ],
+  "evaluate-the-bracket-pairs-of-a-string": [
+    "Array",
+    "Hash Table",
+    "String"
+  ],
   "excel-sheet-column-number": [
     "Math",
     "String"

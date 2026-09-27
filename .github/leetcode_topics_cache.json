@@ -390,6 +390,11 @@
     "Backtracking",
     "Bracket Sequences"
   ],
+  "gray-code": [
+    "Math",
+    "Backtracking",
+    "Bit Manipulation"
+  ],
   "group-anagrams": [
     "Array",
     "Hash Table",

@@ -45,13 +45,13 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
 | :---: | :---: | :---: | :---: |
-| **127** | **124** | **24** | **275** |
+| **127** | **125** | **24** | **276** |
 
 ### Difficulty Distribution
 
 ```text
 🟢 Easy        127  █████████████████████████
-🟡 Medium      124  ████████████████████████░
+🟡 Medium      125  █████████████████████████
 🔴 Hard         24  █████░░░░░░░░░░░░░░░░░░░░
 ```
 <!-- LEETCODE-STATS:END -->
@@ -69,7 +69,7 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Topic | Problems | Progress |
 | :--- | ---: | :--- |
 | Array | **144** | `█████████████████████████` |
-| String | **76** | `█████████████░░░░░░░░░░░░` |
+| String | **77** | `█████████████░░░░░░░░░░░░` |
 | Math | **66** | `███████████░░░░░░░░░░░░░░` |
 | Hash Table | **58** | `██████████░░░░░░░░░░░░░░░` |
 | Two Pointers | **45** | `████████░░░░░░░░░░░░░░░░░` |
@@ -78,8 +78,8 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Dynamic Programming | **29** | `█████░░░░░░░░░░░░░░░░░░░░` |
 | Greedy | **29** | `█████░░░░░░░░░░░░░░░░░░░░` |
 | Simulation | **26** | `█████░░░░░░░░░░░░░░░░░░░░` |
+| Stack | **22** | `████░░░░░░░░░░░░░░░░░░░░░` |
 | Linked List | **21** | `████░░░░░░░░░░░░░░░░░░░░░` |
-| Stack | **21** | `████░░░░░░░░░░░░░░░░░░░░░` |
 | Bit Manipulation | **21** | `████░░░░░░░░░░░░░░░░░░░░░` |
 | Recursion | **14** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Matrix | **14** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
@@ -91,8 +91,8 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Game Theory | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Enumeration | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Sliding Window | **6** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Bracket Sequences | **6** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Minimax | **6** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
-| Bracket Sequences | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Breadth-First Search | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Zero-Sum Game | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Heap (Priority Queue) | **4** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |

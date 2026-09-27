@@ -1027,6 +1027,11 @@
     "Two Pointers",
     "String"
   ],
+  "reverse-substrings-between-each-pair-of-parentheses": [
+    "String",
+    "Stack",
+    "Bracket Sequences"
+  ],
   "reverse-vowels-of-a-string": [
     "Two Pointers",
     "String"

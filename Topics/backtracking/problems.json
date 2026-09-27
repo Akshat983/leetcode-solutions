@@ -4,7 +4,7 @@
     "slug": "backtracking",
     "name": "Backtracking"
   },
-  "updatedAt": "2026-09-02T21:30:42.090Z",
+  "updatedAt": "2026-09-27T14:10:52.207Z",
   "problems": [
     {
       "frontendId": "77",
@@ -23,6 +23,26 @@
           "path": "0077-combinations/0077-combinations.java",
           "sha": "34667e67e1a96c9031396a9a357105ccae95a9b2",
           "lastSyncedAt": "2026-09-02T21:30:42.090Z"
+        }
+      ]
+    },
+    {
+      "frontendId": "89",
+      "title": "Gray Code",
+      "slug": "gray-code",
+      "problemName": "0089-gray-code",
+      "difficulty": "Medium",
+      "leetcodeUrl": "https://leetcode.com/problems/gray-code/",
+      "folderPath": "0089-gray-code/",
+      "readmePath": "0089-gray-code/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "0089-gray-code.java",
+          "path": "0089-gray-code/0089-gray-code.java",
+          "sha": "cf0db2bd9d1285ce1c16f737a8ddb5f3409a4b88",
+          "lastSyncedAt": "2026-09-27T14:10:52.207Z"
         }
       ]
     }

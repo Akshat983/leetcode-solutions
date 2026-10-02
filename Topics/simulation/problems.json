@@ -4,8 +4,28 @@
     "slug": "simulation",
     "name": "Simulation"
   },
-  "updatedAt": "2026-09-20T20:02:00.882Z",
+  "updatedAt": "2026-10-02T16:36:01.607Z",
   "problems": [
+    {
+      "frontendId": "54",
+      "title": "Spiral Matrix",
+      "slug": "spiral-matrix",
+      "problemName": "0054-spiral-matrix",
+      "difficulty": "Medium",
+      "leetcodeUrl": "https://leetcode.com/problems/spiral-matrix/",
+      "folderPath": "0054-spiral-matrix/",
+      "readmePath": "0054-spiral-matrix/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "0054-spiral-matrix.java",
+          "path": "0054-spiral-matrix/0054-spiral-matrix.java",
+          "sha": "1b72acafdcb34fce70d7250b87c4d4a055772ea4",
+          "lastSyncedAt": "2026-10-02T16:36:01.607Z"
+        }
+      ]
+    },
     {
       "frontendId": "3069",
       "title": "Distribute Elements Into Two Arrays I",

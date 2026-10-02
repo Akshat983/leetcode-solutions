@@ -904,6 +904,10 @@
     "Math",
     "Recursion"
   ],
+  "permutations": [
+    "Array",
+    "Backtracking"
+  ],
   "plus-one": [
     "Array",
     "Math"

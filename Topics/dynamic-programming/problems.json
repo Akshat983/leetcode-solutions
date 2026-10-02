@@ -4,8 +4,28 @@
     "slug": "dynamic-programming",
     "name": "Dynamic Programming"
   },
-  "updatedAt": "2026-09-02T22:10:22.668Z",
+  "updatedAt": "2026-10-02T16:16:05.828Z",
   "problems": [
+    {
+      "frontendId": "22",
+      "title": "Generate Parentheses",
+      "slug": "generate-parentheses",
+      "problemName": "0022-generate-parentheses",
+      "difficulty": "Medium",
+      "leetcodeUrl": "https://leetcode.com/problems/generate-parentheses/",
+      "folderPath": "0022-generate-parentheses/",
+      "readmePath": "0022-generate-parentheses/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "0022-generate-parentheses.java",
+          "path": "0022-generate-parentheses/0022-generate-parentheses.java",
+          "sha": "10f5f6ca83b45bb0a230f9c1d6c960922e649635",
+          "lastSyncedAt": "2026-10-02T16:16:05.828Z"
+        }
+      ]
+    },
     {
       "frontendId": "32",
       "title": "Longest Valid Parentheses",

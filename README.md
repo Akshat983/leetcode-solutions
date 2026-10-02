@@ -45,13 +45,13 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
 | :---: | :---: | :---: | :---: |
-| **127** | **126** | **24** | **277** |
+| **127** | **127** | **24** | **278** |
 
 ### Difficulty Distribution
 
 ```text
 🟢 Easy        127  █████████████████████████
-🟡 Medium      126  █████████████████████████
+🟡 Medium      127  █████████████████████████
 🔴 Hard         24  █████░░░░░░░░░░░░░░░░░░░░
 ```
 <!-- LEETCODE-STATS:END -->
@@ -68,7 +68,7 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | Topic | Problems | Progress |
 | :--- | ---: | :--- |
-| Array | **144** | `█████████████████████████` |
+| Array | **145** | `█████████████████████████` |
 | String | **77** | `█████████████░░░░░░░░░░░░` |
 | Math | **67** | `████████████░░░░░░░░░░░░░` |
 | Hash Table | **58** | `██████████░░░░░░░░░░░░░░░` |
@@ -77,12 +77,12 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Binary Search | **31** | `█████░░░░░░░░░░░░░░░░░░░░` |
 | Dynamic Programming | **29** | `█████░░░░░░░░░░░░░░░░░░░░` |
 | Greedy | **29** | `█████░░░░░░░░░░░░░░░░░░░░` |
-| Simulation | **26** | `█████░░░░░░░░░░░░░░░░░░░░` |
+| Simulation | **27** | `█████░░░░░░░░░░░░░░░░░░░░` |
 | Stack | **22** | `████░░░░░░░░░░░░░░░░░░░░░` |
 | Bit Manipulation | **22** | `████░░░░░░░░░░░░░░░░░░░░░` |
 | Linked List | **21** | `████░░░░░░░░░░░░░░░░░░░░░` |
+| Matrix | **15** | `███░░░░░░░░░░░░░░░░░░░░░░` |
 | Recursion | **14** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
-| Matrix | **14** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Prefix Sum | **11** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Divide and Conquer | **10** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Backtracking | **10** | `██░░░░░░░░░░░░░░░░░░░░░░░` |

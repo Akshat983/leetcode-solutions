@@ -1174,6 +1174,11 @@
     "Sorting",
     "Merge Sort"
   ],
+  "spiral-matrix": [
+    "Array",
+    "Matrix",
+    "Simulation"
+  ],
   "split-array-largest-sum": [
     "Array",
     "Binary Search",

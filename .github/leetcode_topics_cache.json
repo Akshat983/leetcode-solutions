@@ -1094,6 +1094,11 @@
     "Sorting",
     "Longest Increasing Subsequence"
   ],
+  "score-of-parentheses": [
+    "String",
+    "Stack",
+    "Bracket Sequences"
+  ],
   "search-in-rotated-sorted-array": [
     "Array",
     "Binary Search"

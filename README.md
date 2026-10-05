@@ -45,13 +45,13 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
 | :---: | :---: | :---: | :---: |
-| **127** | **128** | **24** | **279** |
+| **127** | **129** | **24** | **280** |
 
 ### Difficulty Distribution
 
 ```text
 🟢 Easy        127  █████████████████████████
-🟡 Medium      128  █████████████████████████
+🟡 Medium      129  █████████████████████████
 🔴 Hard         24  █████░░░░░░░░░░░░░░░░░░░░
 ```
 <!-- LEETCODE-STATS:END -->
@@ -69,7 +69,7 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Topic | Problems | Progress |
 | :--- | ---: | :--- |
 | Array | **146** | `█████████████████████████` |
-| String | **77** | `█████████████░░░░░░░░░░░░` |
+| String | **78** | `█████████████░░░░░░░░░░░░` |
 | Math | **67** | `███████████░░░░░░░░░░░░░░` |
 | Hash Table | **58** | `██████████░░░░░░░░░░░░░░░` |
 | Two Pointers | **45** | `████████░░░░░░░░░░░░░░░░░` |
@@ -78,7 +78,7 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Dynamic Programming | **29** | `█████░░░░░░░░░░░░░░░░░░░░` |
 | Greedy | **29** | `█████░░░░░░░░░░░░░░░░░░░░` |
 | Simulation | **27** | `█████░░░░░░░░░░░░░░░░░░░░` |
-| Stack | **22** | `████░░░░░░░░░░░░░░░░░░░░░` |
+| Stack | **23** | `████░░░░░░░░░░░░░░░░░░░░░` |
 | Bit Manipulation | **22** | `████░░░░░░░░░░░░░░░░░░░░░` |
 | Linked List | **21** | `████░░░░░░░░░░░░░░░░░░░░░` |
 | Matrix | **15** | `███░░░░░░░░░░░░░░░░░░░░░░` |
@@ -87,11 +87,11 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Prefix Sum | **11** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Divide and Conquer | **10** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Counting | **8** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Bracket Sequences | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Monotonic Stack | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Game Theory | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Enumeration | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Sliding Window | **6** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
-| Bracket Sequences | **6** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Minimax | **6** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Breadth-First Search | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Zero-Sum Game | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |

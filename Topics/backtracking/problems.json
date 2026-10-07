@@ -4,7 +4,7 @@
     "slug": "backtracking",
     "name": "Backtracking"
   },
-  "updatedAt": "2026-10-02T17:36:06.936Z",
+  "updatedAt": "2026-10-07T11:00:29.594Z",
   "problems": [
     {
       "frontendId": "22",
@@ -83,6 +83,26 @@
           "path": "0089-gray-code/0089-gray-code.java",
           "sha": "cf0db2bd9d1285ce1c16f737a8ddb5f3409a4b88",
           "lastSyncedAt": "2026-09-27T14:10:52.207Z"
+        }
+      ]
+    },
+    {
+      "frontendId": "301",
+      "title": "Remove Invalid Parentheses",
+      "slug": "remove-invalid-parentheses",
+      "problemName": "0301-remove-invalid-parentheses",
+      "difficulty": "Hard",
+      "leetcodeUrl": "https://leetcode.com/problems/remove-invalid-parentheses/",
+      "folderPath": "0301-remove-invalid-parentheses/",
+      "readmePath": "0301-remove-invalid-parentheses/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "0301-remove-invalid-parentheses.java",
+          "path": "0301-remove-invalid-parentheses/0301-remove-invalid-parentheses.java",
+          "sha": "6ee3585aa5d4ad0da33176495ed234880a5ac8ec",
+          "lastSyncedAt": "2026-10-07T11:00:29.594Z"
         }
       ]
     }

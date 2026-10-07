@@ -45,14 +45,14 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
 | :---: | :---: | :---: | :---: |
-| **127** | **129** | **24** | **280** |
+| **128** | **129** | **25** | **282** |
 
 ### Difficulty Distribution
 
 ```text
-🟢 Easy        127  █████████████████████████
+🟢 Easy        128  █████████████████████████
 🟡 Medium      129  █████████████████████████
-🔴 Hard         24  █████░░░░░░░░░░░░░░░░░░░░
+🔴 Hard         25  █████░░░░░░░░░░░░░░░░░░░░
 ```
 <!-- LEETCODE-STATS:END -->
 
@@ -69,7 +69,7 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Topic | Problems | Progress |
 | :--- | ---: | :--- |
 | Array | **146** | `█████████████████████████` |
-| String | **78** | `█████████████░░░░░░░░░░░░` |
+| String | **79** | `██████████████░░░░░░░░░░░` |
 | Math | **67** | `███████████░░░░░░░░░░░░░░` |
 | Hash Table | **58** | `██████████░░░░░░░░░░░░░░░` |
 | Two Pointers | **45** | `████████░░░░░░░░░░░░░░░░░` |
@@ -83,7 +83,7 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Linked List | **21** | `████░░░░░░░░░░░░░░░░░░░░░` |
 | Matrix | **15** | `███░░░░░░░░░░░░░░░░░░░░░░` |
 | Recursion | **14** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
-| Backtracking | **11** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
+| Backtracking | **12** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Prefix Sum | **11** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Divide and Conquer | **10** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Counting | **8** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
@@ -92,8 +92,8 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Game Theory | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Enumeration | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Sliding Window | **6** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Breadth-First Search | **6** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Minimax | **6** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
-| Breadth-First Search | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Zero-Sum Game | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Heap (Priority Queue) | **4** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Depth-First Search | **4** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |

@@ -783,6 +783,7 @@
     "String",
     "Enumeration"
   ],
+  "minimum-rotations-to-dial-a-number-i": [],
   "missing-number": [
     "Array",
     "Hash Table",
@@ -975,6 +976,11 @@
   "remove-element": [
     "Array",
     "Two Pointers"
+  ],
+  "remove-invalid-parentheses": [
+    "String",
+    "Backtracking",
+    "Breadth-First Search"
   ],
   "remove-k-digits": [
     "String",

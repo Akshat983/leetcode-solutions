@@ -2,9 +2,10 @@
   "version": 1,
   "topic": {
     "slug": "stack",
-    "name": "Stack"
+    "name": "Stack",
+    "tagId": "15"
   },
-  "updatedAt": "2026-10-05T16:06:55.103Z",
+  "updatedAt": "2026-10-09T18:30:49.397Z",
   "problems": [
     {
       "frontendId": "20",
@@ -83,6 +84,26 @@
           "path": "1190-reverse-substrings-between-each-pair-of-parentheses/1190-reverse-substrings-between-each-pair-of-parentheses.java",
           "sha": "ae3ec257cc6a8ae6df40e4299f5c35ea5ced4a21",
           "lastSyncedAt": "2026-09-27T14:00:39.974Z"
+        }
+      ]
+    },
+    {
+      "frontendId": "1541",
+      "title": "Minimum Insertions to Balance a Parentheses String",
+      "slug": "minimum-insertions-to-balance-a-parentheses-string",
+      "problemName": "1541-minimum-insertions-to-balance-a-parentheses-string",
+      "difficulty": "Medium",
+      "leetcodeUrl": "https://leetcode.com/problems/minimum-insertions-to-balance-a-parentheses-string/",
+      "folderPath": "1541-minimum-insertions-to-balance-a-parentheses-string/",
+      "readmePath": "1541-minimum-insertions-to-balance-a-parentheses-string/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "1541-minimum-insertions-to-balance-a-parentheses-string.java",
+          "path": "1541-minimum-insertions-to-balance-a-parentheses-string/1541-minimum-insertions-to-balance-a-parentheses-string.java",
+          "sha": "34afc90cbd8587045cbda485fc98c44beeeaeb23",
+          "lastSyncedAt": "2026-10-09T18:30:49.397Z"
         }
       ]
     }

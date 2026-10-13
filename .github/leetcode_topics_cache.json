@@ -629,6 +629,11 @@
     "Math",
     "Greedy"
   ],
+  "maximum-alternating-sum-of-squares": [
+    "Array",
+    "Greedy",
+    "Sorting"
+  ],
   "maximum-amount-of-money-robot-can-earn": [
     "Array",
     "Dynamic Programming",

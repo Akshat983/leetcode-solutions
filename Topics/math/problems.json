@@ -2,9 +2,10 @@
   "version": 1,
   "topic": {
     "slug": "math",
-    "name": "Math"
+    "name": "Math",
+    "tagId": "8"
   },
-  "updatedAt": "2026-09-27T14:10:52.207Z",
+  "updatedAt": "2026-10-14T20:04:48.016Z",
   "problems": [
     {
       "frontendId": "89",
@@ -143,6 +144,26 @@
           "path": "2029-stone-game-ix/2029-stone-game-ix.java",
           "sha": "b0eb80fd3ca2e96b5096d94928ec9f734b8c44e8",
           "lastSyncedAt": "2026-08-27T14:32:19.161Z"
+        }
+      ]
+    },
+    {
+      "frontendId": "3723",
+      "title": "Maximize Sum of Squares of Digits",
+      "slug": "maximize-sum-of-squares-of-digits",
+      "problemName": "3723-maximize-sum-of-squares-of-digits",
+      "difficulty": "Medium",
+      "leetcodeUrl": "https://leetcode.com/problems/maximize-sum-of-squares-of-digits/",
+      "folderPath": "3723-maximize-sum-of-squares-of-digits/",
+      "readmePath": "3723-maximize-sum-of-squares-of-digits/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "3723-maximize-sum-of-squares-of-digits.java",
+          "path": "3723-maximize-sum-of-squares-of-digits/3723-maximize-sum-of-squares-of-digits.java",
+          "sha": "4f76ddbd5ebf8313a647b42043710eb4dcb2abc3",
+          "lastSyncedAt": "2026-10-14T20:04:48.016Z"
         }
       ]
     },

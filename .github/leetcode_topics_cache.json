@@ -625,6 +625,10 @@
     "Binary Search",
     "Segment Tree"
   ],
+  "maximize-sum-of-squares-of-digits": [
+    "Math",
+    "Greedy"
+  ],
   "maximum-69-number": [
     "Math",
     "Greedy"

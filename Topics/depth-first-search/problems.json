@@ -5,8 +5,28 @@
     "name": "Depth-First Search",
     "tagId": "21"
   },
-  "updatedAt": "2026-10-15T20:10:33.230Z",
+  "updatedAt": "2026-10-15T20:46:28.718Z",
   "problems": [
+    {
+      "frontendId": "116",
+      "title": "Populating Next Right Pointers in Each Node",
+      "slug": "populating-next-right-pointers-in-each-node",
+      "problemName": "0116-populating-next-right-pointers-in-each-node",
+      "difficulty": "Medium",
+      "leetcodeUrl": "https://leetcode.com/problems/populating-next-right-pointers-in-each-node/",
+      "folderPath": "0116-populating-next-right-pointers-in-each-node/",
+      "readmePath": "0116-populating-next-right-pointers-in-each-node/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "0116-populating-next-right-pointers-in-each-node.java",
+          "path": "0116-populating-next-right-pointers-in-each-node/0116-populating-next-right-pointers-in-each-node.java",
+          "sha": "7e9d3ff8774c0162cc4404fca6f3cab3b44b14a9",
+          "lastSyncedAt": "2026-10-15T20:46:28.718Z"
+        }
+      ]
+    },
     {
       "frontendId": "637",
       "title": "Average of Levels in Binary Tree",

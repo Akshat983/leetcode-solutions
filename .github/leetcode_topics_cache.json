@@ -64,6 +64,11 @@
     "Breadth-First Search",
     "Binary Tree"
   ],
+  "binary-tree-zigzag-level-order-traversal": [
+    "Tree",
+    "Breadth-First Search",
+    "Binary Tree"
+  ],
   "binary-trees-with-factors": [
     "Array",
     "Hash Table",

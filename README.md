@@ -45,13 +45,13 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
 | :---: | :---: | :---: | :---: |
-| **130** | **132** | **25** | **287** |
+| **130** | **133** | **25** | **288** |
 
 ### Difficulty Distribution
 
 ```text
-🟢 Easy        130  █████████████████████████
-🟡 Medium      132  █████████████████████████
+🟢 Easy        130  ████████████████████████░
+🟡 Medium      133  █████████████████████████
 🔴 Hard         25  █████░░░░░░░░░░░░░░░░░░░░
 ```
 <!-- LEETCODE-STATS:END -->
@@ -86,7 +86,7 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Backtracking | **12** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Prefix Sum | **11** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Divide and Conquer | **10** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
-| Breadth-First Search | **8** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Breadth-First Search | **9** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Counting | **8** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Bracket Sequences | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Monotonic Stack | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
@@ -101,14 +101,14 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Merge Sort | **3** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Algorithm X | **3** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Quicksort | **3** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Tree | **3** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Binary Tree | **3** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Design | **3** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Nim Game | **3** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Number Theory | **3** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Segment Tree | **3** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Trie | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Memoization | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
-| Tree | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
-| Binary Tree | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Boyer–Moore Majority Vote Algorithm | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Queue | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Interactive | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |

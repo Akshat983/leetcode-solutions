@@ -5,7 +5,7 @@
     "name": "Depth-First Search",
     "tagId": "21"
   },
-  "updatedAt": "2026-10-15T20:58:39.913Z",
+  "updatedAt": "2026-10-15T21:27:17.899Z",
   "problems": [
     {
       "frontendId": "116",
@@ -64,6 +64,26 @@
           "path": "0637-average-of-levels-in-binary-tree/0637-average-of-levels-in-binary-tree.java",
           "sha": "3f4d8338c5d96e33157e4c9a5552fc8bb650737c",
           "lastSyncedAt": "2026-10-15T20:10:33.230Z"
+        }
+      ]
+    },
+    {
+      "frontendId": "993",
+      "title": "Cousins in Binary Tree",
+      "slug": "cousins-in-binary-tree",
+      "problemName": "0993-cousins-in-binary-tree",
+      "difficulty": "Easy",
+      "leetcodeUrl": "https://leetcode.com/problems/cousins-in-binary-tree/",
+      "folderPath": "0993-cousins-in-binary-tree/",
+      "readmePath": "0993-cousins-in-binary-tree/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "0993-cousins-in-binary-tree.java",
+          "path": "0993-cousins-in-binary-tree/0993-cousins-in-binary-tree.java",
+          "sha": "5446a08c4126beb419e750b8f81ea74106c065ed",
+          "lastSyncedAt": "2026-10-15T21:27:17.899Z"
         }
       ]
     }

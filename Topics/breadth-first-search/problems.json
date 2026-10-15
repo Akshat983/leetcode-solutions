@@ -5,7 +5,7 @@
     "name": "Breadth-First Search",
     "tagId": "22"
   },
-  "updatedAt": "2026-10-15T19:56:31.645Z",
+  "updatedAt": "2026-10-15T20:10:33.230Z",
   "problems": [
     {
       "frontendId": "102",
@@ -44,6 +44,26 @@
           "path": "0301-remove-invalid-parentheses/0301-remove-invalid-parentheses.java",
           "sha": "6ee3585aa5d4ad0da33176495ed234880a5ac8ec",
           "lastSyncedAt": "2026-10-07T11:00:29.594Z"
+        }
+      ]
+    },
+    {
+      "frontendId": "637",
+      "title": "Average of Levels in Binary Tree",
+      "slug": "average-of-levels-in-binary-tree",
+      "problemName": "0637-average-of-levels-in-binary-tree",
+      "difficulty": "Easy",
+      "leetcodeUrl": "https://leetcode.com/problems/average-of-levels-in-binary-tree/",
+      "folderPath": "0637-average-of-levels-in-binary-tree/",
+      "readmePath": "0637-average-of-levels-in-binary-tree/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "0637-average-of-levels-in-binary-tree.java",
+          "path": "0637-average-of-levels-in-binary-tree/0637-average-of-levels-in-binary-tree.java",
+          "sha": "3f4d8338c5d96e33157e4c9a5552fc8bb650737c",
+          "lastSyncedAt": "2026-10-15T20:10:33.230Z"
         }
       ]
     },

@@ -53,6 +53,11 @@
     "Array",
     "Binary Search"
   ],
+  "binary-tree-level-order-traversal": [
+    "Tree",
+    "Breadth-First Search",
+    "Binary Tree"
+  ],
   "binary-trees-with-factors": [
     "Array",
     "Hash Table",

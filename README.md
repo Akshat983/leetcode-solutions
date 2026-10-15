@@ -45,13 +45,13 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
 | :---: | :---: | :---: | :---: |
-| **129** | **131** | **25** | **285** |
+| **129** | **132** | **25** | **286** |
 
 ### Difficulty Distribution
 
 ```text
-🟢 Easy        129  █████████████████████████
-🟡 Medium      131  █████████████████████████
+🟢 Easy        129  ████████████████████████░
+🟡 Medium      132  █████████████████████████
 🔴 Hard         25  █████░░░░░░░░░░░░░░░░░░░░
 ```
 <!-- LEETCODE-STATS:END -->
@@ -89,10 +89,10 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Counting | **8** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Bracket Sequences | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Monotonic Stack | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Breadth-First Search | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Game Theory | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Enumeration | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Sliding Window | **6** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
-| Breadth-First Search | **6** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Minimax | **6** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Zero-Sum Game | **5** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Heap (Priority Queue) | **4** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
@@ -124,6 +124,8 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Newton's Method | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Bubble Sort | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Range Minimum/Maximum Query | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Tree | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Binary Tree | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Union-Find | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Quickselect | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Pigeonhole Principle | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |

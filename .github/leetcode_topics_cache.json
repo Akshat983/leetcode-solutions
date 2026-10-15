@@ -49,6 +49,12 @@
     "Stack",
     "Simulation"
   ],
+  "average-of-levels-in-binary-tree": [
+    "Tree",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Binary Tree"
+  ],
   "binary-search": [
     "Array",
     "Binary Search"

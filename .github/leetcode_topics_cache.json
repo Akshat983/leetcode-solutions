@@ -938,6 +938,13 @@
     "Array",
     "Math"
   ],
+  "populating-next-right-pointers-in-each-node": [
+    "Linked List",
+    "Tree",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Binary Tree"
+  ],
   "power-of-four": [
     "Math",
     "Bit Manipulation",

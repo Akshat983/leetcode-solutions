@@ -64,6 +64,12 @@
     "Breadth-First Search",
     "Binary Tree"
   ],
+  "binary-tree-right-side-view": [
+    "Tree",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Binary Tree"
+  ],
   "binary-tree-zigzag-level-order-traversal": [
     "Tree",
     "Breadth-First Search",

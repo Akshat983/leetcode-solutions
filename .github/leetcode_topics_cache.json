@@ -200,6 +200,12 @@
     "Hash Table",
     "String"
   ],
+  "cousins-in-binary-tree": [
+    "Tree",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Binary Tree"
+  ],
   "daily-temperatures": [
     "Array",
     "Stack",

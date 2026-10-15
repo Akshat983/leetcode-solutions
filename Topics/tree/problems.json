@@ -5,7 +5,7 @@
     "name": "Tree",
     "tagId": "20"
   },
-  "updatedAt": "2026-10-15T20:46:28.718Z",
+  "updatedAt": "2026-10-15T20:53:07.456Z",
   "problems": [
     {
       "frontendId": "102",
@@ -63,7 +63,7 @@
           "filename": "0116-populating-next-right-pointers-in-each-node.java",
           "path": "0116-populating-next-right-pointers-in-each-node/0116-populating-next-right-pointers-in-each-node.java",
           "sha": "7e9d3ff8774c0162cc4404fca6f3cab3b44b14a9",
-          "lastSyncedAt": "2026-10-15T20:46:28.718Z"
+          "lastSyncedAt": "2026-10-15T20:53:07.456Z"
         }
       ]
     },

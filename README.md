@@ -45,12 +45,12 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
 | :---: | :---: | :---: | :---: |
-| **128** | **131** | **25** | **284** |
+| **129** | **131** | **25** | **285** |
 
 ### Difficulty Distribution
 
 ```text
-🟢 Easy        128  ████████████████████████░
+🟢 Easy        129  █████████████████████████
 🟡 Medium      131  █████████████████████████
 🔴 Hard         25  █████░░░░░░░░░░░░░░░░░░░░
 ```
@@ -68,10 +68,10 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | Topic | Problems | Progress |
 | :--- | ---: | :--- |
-| Array | **147** | `█████████████████████████` |
+| Array | **148** | `█████████████████████████` |
 | String | **79** | `█████████████░░░░░░░░░░░░` |
-| Math | **68** | `████████████░░░░░░░░░░░░░` |
-| Hash Table | **58** | `██████████░░░░░░░░░░░░░░░` |
+| Math | **68** | `███████████░░░░░░░░░░░░░░` |
+| Hash Table | **59** | `██████████░░░░░░░░░░░░░░░` |
 | Two Pointers | **45** | `████████░░░░░░░░░░░░░░░░░` |
 | Sorting | **45** | `████████░░░░░░░░░░░░░░░░░` |
 | Binary Search | **31** | `█████░░░░░░░░░░░░░░░░░░░░` |
@@ -104,6 +104,7 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Design | **3** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Nim Game | **3** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Number Theory | **3** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Segment Tree | **3** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Trie | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Memoization | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Boyer–Moore Majority Vote Algorithm | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
@@ -112,7 +113,6 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Geometry | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Counting Sort | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Graph Theory | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
-| Segment Tree | **2** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Manacher | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Tournament Sort | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | String Matching | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
@@ -135,6 +135,7 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Sprague–Grundy Theorem | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Euclidean Algorithm | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Greatest Common Divisor | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Binary Indexed Tree | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Shortest Path | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 <!-- LEETCODE-TOPICS:END -->
 

@@ -1262,6 +1262,12 @@
   "string-to-integer-atoi": [
     "String"
   ],
+  "subarrays-distinct-element-sum-of-squares-i": [
+    "Array",
+    "Hash Table",
+    "Binary Indexed Tree",
+    "Segment Tree"
+  ],
   "sudoku-solver": [
     "Array",
     "Hash Table",

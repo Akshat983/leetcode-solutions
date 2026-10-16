@@ -5,7 +5,7 @@
     "name": "Breadth-First Search",
     "tagId": "22"
   },
-  "updatedAt": "2026-10-16T20:23:46.592Z",
+  "updatedAt": "2026-10-16T20:26:55.131Z",
   "problems": [
     {
       "frontendId": "101",
@@ -64,6 +64,26 @@
           "path": "0103-binary-tree-zigzag-level-order-traversal/0103-binary-tree-zigzag-level-order-traversal.java",
           "sha": "fed964fc1a9f3a43b73bf18680482d54f31eaaef",
           "lastSyncedAt": "2026-10-15T20:33:32.352Z"
+        }
+      ]
+    },
+    {
+      "frontendId": "104",
+      "title": "Maximum Depth of Binary Tree",
+      "slug": "maximum-depth-of-binary-tree",
+      "problemName": "0104-maximum-depth-of-binary-tree",
+      "difficulty": "Easy",
+      "leetcodeUrl": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+      "folderPath": "0104-maximum-depth-of-binary-tree/",
+      "readmePath": "0104-maximum-depth-of-binary-tree/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "0104-maximum-depth-of-binary-tree.java",
+          "path": "0104-maximum-depth-of-binary-tree/0104-maximum-depth-of-binary-tree.java",
+          "sha": "25276a35c1c1fd47af29e9cdb75b5280c7054cc0",
+          "lastSyncedAt": "2026-10-16T20:26:55.131Z"
         }
       ]
     },

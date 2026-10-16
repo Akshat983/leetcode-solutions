@@ -180,6 +180,13 @@
     "Linked List",
     "Math"
   ],
+  "convert-sorted-array-to-binary-search-tree": [
+    "Array",
+    "Divide and Conquer",
+    "Tree",
+    "Binary Search Tree",
+    "Binary Tree"
+  ],
   "count-and-say": [
     "String"
   ],

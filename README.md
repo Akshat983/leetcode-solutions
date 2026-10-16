@@ -45,12 +45,12 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
 | :---: | :---: | :---: | :---: |
-| **135** | **135** | **25** | **295** |
+| **136** | **135** | **25** | **296** |
 
 ### Difficulty Distribution
 
 ```text
-🟢 Easy        135  █████████████████████████
+🟢 Easy        136  █████████████████████████
 🟡 Medium      135  █████████████████████████
 🔴 Hard         25  █████░░░░░░░░░░░░░░░░░░░░
 ```
@@ -68,7 +68,7 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | Topic | Problems | Progress |
 | :--- | ---: | :--- |
-| Array | **148** | `█████████████████████████` |
+| Array | **149** | `█████████████████████████` |
 | String | **79** | `█████████████░░░░░░░░░░░░` |
 | Math | **68** | `███████████░░░░░░░░░░░░░░` |
 | Hash Table | **59** | `██████████░░░░░░░░░░░░░░░` |
@@ -86,10 +86,10 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Recursion | **14** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Backtracking | **12** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Depth-First Search | **12** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
+| Divide and Conquer | **11** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
+| Tree | **11** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
+| Binary Tree | **11** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Prefix Sum | **11** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
-| Divide and Conquer | **10** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
-| Tree | **10** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
-| Binary Tree | **10** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Counting | **8** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Bracket Sequences | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Monotonic Stack | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
@@ -126,6 +126,7 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Newton's Method | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Bubble Sort | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Range Minimum/Maximum Query | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Binary Search Tree | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Union-Find | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Quickselect | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Pigeonhole Principle | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |

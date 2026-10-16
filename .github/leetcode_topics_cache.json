@@ -474,6 +474,12 @@
     "Linked List",
     "Two Pointers"
   ],
+  "invert-binary-tree": [
+    "Tree",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Binary Tree"
+  ],
   "is-subsequence": [
     "Two Pointers",
     "String",

@@ -235,6 +235,12 @@
     "Matrix",
     "Simulation"
   ],
+  "diameter-of-binary-tree": [
+    "Tree",
+    "Depth-First Search",
+    "Binary Tree",
+    "DP on Trees"
+  ],
   "distribute-elements-into-two-arrays-i": [
     "Array",
     "Simulation"

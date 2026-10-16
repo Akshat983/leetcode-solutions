@@ -45,12 +45,12 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
 | :---: | :---: | :---: | :---: |
-| **132** | **135** | **25** | **292** |
+| **133** | **135** | **25** | **293** |
 
 ### Difficulty Distribution
 
 ```text
-🟢 Easy        132  ████████████████████████░
+🟢 Easy        133  █████████████████████████
 🟡 Medium      135  █████████████████████████
 🔴 Hard         25  █████░░░░░░░░░░░░░░░░░░░░
 ```
@@ -87,12 +87,12 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Backtracking | **12** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Prefix Sum | **11** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Divide and Conquer | **10** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
-| Depth-First Search | **9** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
+| Depth-First Search | **10** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
+| Tree | **8** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
+| Binary Tree | **8** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Counting | **8** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Bracket Sequences | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Monotonic Stack | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
-| Tree | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
-| Binary Tree | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Game Theory | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Enumeration | **7** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Sliding Window | **6** | `█░░░░░░░░░░░░░░░░░░░░░░░░` |
@@ -132,6 +132,7 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Brainteaser | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Impartial Game | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Longest Increasing Subsequence | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
+| DP on Trees | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Ternary Search | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Timsort | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |
 | Sprague–Grundy Theorem | **1** | `░░░░░░░░░░░░░░░░░░░░░░░░░` |

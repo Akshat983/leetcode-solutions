@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "topic": {
+    "slug": "divide-and-conquer",
+    "name": "Divide and Conquer",
+    "tagId": "12"
+  },
+  "updatedAt": "2026-10-16T20:37:08.465Z",
+  "problems": [
+    {
+      "frontendId": "108",
+      "title": "Convert Sorted Array to Binary Search Tree",
+      "slug": "convert-sorted-array-to-binary-search-tree",
+      "problemName": "0108-convert-sorted-array-to-binary-search-tree",
+      "difficulty": "Easy",
+      "leetcodeUrl": "https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/",
+      "folderPath": "0108-convert-sorted-array-to-binary-search-tree/",
+      "readmePath": "0108-convert-sorted-array-to-binary-search-tree/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "0108-convert-sorted-array-to-binary-search-tree.java",
+          "path": "0108-convert-sorted-array-to-binary-search-tree/0108-convert-sorted-array-to-binary-search-tree.java",
+          "sha": "6c927428057599255496499a344f773d49003c4e",
+          "lastSyncedAt": "2026-10-16T20:37:08.465Z"
+        }
+      ]
+    }
+  ]
+}

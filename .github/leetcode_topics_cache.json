@@ -1334,6 +1334,12 @@
     "Linked List",
     "Recursion"
   ],
+  "symmetric-tree": [
+    "Tree",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Binary Tree"
+  ],
   "total-waviness-of-numbers-in-range-i": [
     "Math",
     "Dynamic Programming",

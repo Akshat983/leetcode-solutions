@@ -687,6 +687,12 @@
     "Array",
     "Sliding Window"
   ],
+  "maximum-depth-of-binary-tree": [
+    "Tree",
+    "Depth-First Search",
+    "Breadth-First Search",
+    "Binary Tree"
+  ],
   "maximum-element-after-decreasing-and-rearranging": [
     "Array",
     "Greedy",

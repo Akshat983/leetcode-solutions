@@ -846,6 +846,11 @@
     "Enumeration"
   ],
   "minimum-rotations-to-dial-a-number-i": [],
+  "minimum-swaps-to-sort-by-digit-sum": [
+    "Array",
+    "Hash Table",
+    "Sorting"
+  ],
   "missing-number": [
     "Array",
     "Hash Table",

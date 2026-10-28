@@ -2,9 +2,10 @@
   "version": 1,
   "topic": {
     "slug": "matrix",
-    "name": "Matrix"
+    "name": "Matrix",
+    "tagId": "61053"
   },
-  "updatedAt": "2026-10-02T16:36:01.607Z",
+  "updatedAt": "2026-10-28T19:39:11.876Z",
   "problems": [
     {
       "frontendId": "54",
@@ -43,6 +44,26 @@
           "path": "3568-minimum-moves-to-clean-the-classroom/3568-minimum-moves-to-clean-the-classroom.java",
           "sha": "7c51154096a342a0bf43c78e49e6005b151ed83d",
           "lastSyncedAt": "2026-09-01T16:36:47.779Z"
+        }
+      ]
+    },
+    {
+      "frontendId": "3882",
+      "title": "Minimum XOR Path in a Grid",
+      "slug": "minimum-xor-path-in-a-grid",
+      "problemName": "3882-minimum-xor-path-in-a-grid",
+      "difficulty": "Medium",
+      "leetcodeUrl": "https://leetcode.com/problems/minimum-xor-path-in-a-grid/",
+      "folderPath": "3882-minimum-xor-path-in-a-grid/",
+      "readmePath": "3882-minimum-xor-path-in-a-grid/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "3882-minimum-xor-path-in-a-grid.java",
+          "path": "3882-minimum-xor-path-in-a-grid/3882-minimum-xor-path-in-a-grid.java",
+          "sha": "1c42ee01521c2d2cc01e1b481d5b04c034ed4de2",
+          "lastSyncedAt": "2026-10-28T19:39:11.876Z"
         }
       ]
     }

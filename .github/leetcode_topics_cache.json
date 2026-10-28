@@ -851,6 +851,12 @@
     "Hash Table",
     "Sorting"
   ],
+  "minimum-xor-path-in-a-grid": [
+    "Array",
+    "Dynamic Programming",
+    "Bit Manipulation",
+    "Matrix"
+  ],
   "missing-number": [
     "Array",
     "Hash Table",

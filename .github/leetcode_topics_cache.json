@@ -889,6 +889,10 @@
     "Stack",
     "Monotonic Stack"
   ],
+  "next-permutation": [
+    "Array",
+    "Two Pointers"
+  ],
   "nim-game": [
     "Math",
     "Brainteaser",

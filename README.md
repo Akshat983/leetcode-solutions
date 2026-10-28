@@ -45,13 +45,13 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
 | :---: | :---: | :---: | :---: |
-| **136** | **137** | **25** | **298** |
+| **136** | **138** | **25** | **299** |
 
 ### Difficulty Distribution
 
 ```text
 🟢 Easy        136  █████████████████████████
-🟡 Medium      137  █████████████████████████
+🟡 Medium      138  █████████████████████████
 🔴 Hard         25  █████░░░░░░░░░░░░░░░░░░░░
 ```
 <!-- LEETCODE-STATS:END -->
@@ -68,12 +68,12 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | Topic | Problems | Progress |
 | :--- | ---: | :--- |
-| Array | **151** | `█████████████████████████` |
+| Array | **152** | `█████████████████████████` |
 | String | **79** | `█████████████░░░░░░░░░░░░` |
 | Math | **68** | `███████████░░░░░░░░░░░░░░` |
 | Hash Table | **60** | `██████████░░░░░░░░░░░░░░░` |
+| Two Pointers | **46** | `████████░░░░░░░░░░░░░░░░░` |
 | Sorting | **46** | `████████░░░░░░░░░░░░░░░░░` |
-| Two Pointers | **45** | `███████░░░░░░░░░░░░░░░░░░` |
 | Binary Search | **31** | `█████░░░░░░░░░░░░░░░░░░░░` |
 | Greedy | **31** | `█████░░░░░░░░░░░░░░░░░░░░` |
 | Dynamic Programming | **30** | `█████░░░░░░░░░░░░░░░░░░░░` |

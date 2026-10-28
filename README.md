@@ -45,14 +45,14 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | 🟢 Easy | 🟡 Medium | 🔴 Hard | 🧩 Total |
 | :---: | :---: | :---: | :---: |
-| **136** | **138** | **25** | **299** |
+| **136** | **139** | **25** | **300** |
 
 ### Difficulty Distribution
 
 ```text
-🟢 Easy        136  █████████████████████████
-🟡 Medium      138  █████████████████████████
-🔴 Hard         25  █████░░░░░░░░░░░░░░░░░░░░
+🟢 Easy        136  ████████████████████████░
+🟡 Medium      139  █████████████████████████
+🔴 Hard         25  ████░░░░░░░░░░░░░░░░░░░░░
 ```
 <!-- LEETCODE-STATS:END -->
 
@@ -68,7 +68,7 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 
 | Topic | Problems | Progress |
 | :--- | ---: | :--- |
-| Array | **152** | `█████████████████████████` |
+| Array | **153** | `█████████████████████████` |
 | String | **79** | `█████████████░░░░░░░░░░░░` |
 | Math | **68** | `███████████░░░░░░░░░░░░░░` |
 | Hash Table | **60** | `██████████░░░░░░░░░░░░░░░` |
@@ -84,7 +84,7 @@ This repository is a personal log of solved [LeetCode](https://leetcode.com/) pr
 | Matrix | **16** | `███░░░░░░░░░░░░░░░░░░░░░░` |
 | Breadth-First Search | **15** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Recursion | **14** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
-| Backtracking | **12** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
+| Backtracking | **13** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Depth-First Search | **12** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Divide and Conquer | **11** | `██░░░░░░░░░░░░░░░░░░░░░░░` |
 | Tree | **11** | `██░░░░░░░░░░░░░░░░░░░░░░░` |

@@ -2,9 +2,10 @@
   "version": 1,
   "topic": {
     "slug": "bit-manipulation",
-    "name": "Bit Manipulation"
+    "name": "Bit Manipulation",
+    "tagId": "19"
   },
-  "updatedAt": "2026-09-27T14:10:52.207Z",
+  "updatedAt": "2026-10-28T19:39:11.876Z",
   "problems": [
     {
       "frontendId": "89",
@@ -63,6 +64,26 @@
           "path": "3702-longest-subsequence-with-non-zero-bitwise-xor/3702-longest-subsequence-with-non-zero-bitwise-xor.java",
           "sha": "c2ca40912bff5c9e1c73a2accb6d7e2299e132ed",
           "lastSyncedAt": "2026-08-27T14:45:17.121Z"
+        }
+      ]
+    },
+    {
+      "frontendId": "3882",
+      "title": "Minimum XOR Path in a Grid",
+      "slug": "minimum-xor-path-in-a-grid",
+      "problemName": "3882-minimum-xor-path-in-a-grid",
+      "difficulty": "Medium",
+      "leetcodeUrl": "https://leetcode.com/problems/minimum-xor-path-in-a-grid/",
+      "folderPath": "3882-minimum-xor-path-in-a-grid/",
+      "readmePath": "3882-minimum-xor-path-in-a-grid/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "3882-minimum-xor-path-in-a-grid.java",
+          "path": "3882-minimum-xor-path-in-a-grid/3882-minimum-xor-path-in-a-grid.java",
+          "sha": "1c42ee01521c2d2cc01e1b481d5b04c034ed4de2",
+          "lastSyncedAt": "2026-10-28T19:39:11.876Z"
         }
       ]
     }

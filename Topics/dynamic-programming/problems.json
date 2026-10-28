@@ -2,9 +2,10 @@
   "version": 1,
   "topic": {
     "slug": "dynamic-programming",
-    "name": "Dynamic Programming"
+    "name": "Dynamic Programming",
+    "tagId": "13"
   },
-  "updatedAt": "2026-10-02T16:16:05.828Z",
+  "updatedAt": "2026-10-28T19:39:11.876Z",
   "problems": [
     {
       "frontendId": "22",
@@ -103,6 +104,26 @@
           "path": "1872-stone-game-viii/1872-stone-game-viii.java",
           "sha": "de85712db6b09b2bf42d0c367687379dc5be501b",
           "lastSyncedAt": "2026-08-27T14:30:23.397Z"
+        }
+      ]
+    },
+    {
+      "frontendId": "3882",
+      "title": "Minimum XOR Path in a Grid",
+      "slug": "minimum-xor-path-in-a-grid",
+      "problemName": "3882-minimum-xor-path-in-a-grid",
+      "difficulty": "Medium",
+      "leetcodeUrl": "https://leetcode.com/problems/minimum-xor-path-in-a-grid/",
+      "folderPath": "3882-minimum-xor-path-in-a-grid/",
+      "readmePath": "3882-minimum-xor-path-in-a-grid/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "3882-minimum-xor-path-in-a-grid.java",
+          "path": "3882-minimum-xor-path-in-a-grid/3882-minimum-xor-path-in-a-grid.java",
+          "sha": "1c42ee01521c2d2cc01e1b481d5b04c034ed4de2",
+          "lastSyncedAt": "2026-10-28T19:39:11.876Z"
         }
       ]
     }

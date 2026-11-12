@@ -5,7 +5,7 @@
     "name": "Array",
     "tagId": "5"
   },
-  "updatedAt": "2026-10-28T20:36:27.258Z",
+  "updatedAt": "2026-11-12T17:53:12.324Z",
   "problems": [
     {
       "frontendId": "18",
@@ -64,6 +64,26 @@
           "path": "0040-combination-sum-ii/0040-combination-sum-ii.java",
           "sha": "36f6d5f7765e3032ab4ae76490acc92a388db0da",
           "lastSyncedAt": "2026-10-28T20:36:27.258Z"
+        }
+      ]
+    },
+    {
+      "frontendId": "45",
+      "title": "Jump Game II",
+      "slug": "jump-game-ii",
+      "problemName": "0045-jump-game-ii",
+      "difficulty": "Medium",
+      "leetcodeUrl": "https://leetcode.com/problems/jump-game-ii/",
+      "folderPath": "0045-jump-game-ii/",
+      "readmePath": "0045-jump-game-ii/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "0045-jump-game-ii.java",
+          "path": "0045-jump-game-ii/0045-jump-game-ii.java",
+          "sha": "f38d5183c72920c3efc344eb3f657d28c92bb023",
+          "lastSyncedAt": "2026-11-12T17:53:12.324Z"
         }
       ]
     },

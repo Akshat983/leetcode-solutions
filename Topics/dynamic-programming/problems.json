@@ -5,7 +5,7 @@
     "name": "Dynamic Programming",
     "tagId": "13"
   },
-  "updatedAt": "2026-10-28T19:39:11.876Z",
+  "updatedAt": "2026-11-12T17:53:12.324Z",
   "problems": [
     {
       "frontendId": "22",
@@ -44,6 +44,26 @@
           "path": "0032-longest-valid-parentheses/0032-longest-valid-parentheses.java",
           "sha": "515e55a462fedc93146ebd96da69c7a76d1a0151",
           "lastSyncedAt": "2026-09-02T22:10:22.668Z"
+        }
+      ]
+    },
+    {
+      "frontendId": "45",
+      "title": "Jump Game II",
+      "slug": "jump-game-ii",
+      "problemName": "0045-jump-game-ii",
+      "difficulty": "Medium",
+      "leetcodeUrl": "https://leetcode.com/problems/jump-game-ii/",
+      "folderPath": "0045-jump-game-ii/",
+      "readmePath": "0045-jump-game-ii/README.md",
+      "solutions": [
+        {
+          "language": "Java",
+          "extension": ".java",
+          "filename": "0045-jump-game-ii.java",
+          "path": "0045-jump-game-ii/0045-jump-game-ii.java",
+          "sha": "f38d5183c72920c3efc344eb3f657d28c92bb023",
+          "lastSyncedAt": "2026-11-12T17:53:12.324Z"
         }
       ]
     },
